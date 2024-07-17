@@ -33,19 +33,29 @@ export {
 
 // getGreeting should return a string containing
 // 'Hello ' and the contents of `name`
-function getGreeting(name) {}
+function getGreeting(name) {
+  return 'Hello ' + name
+}
 
 // getFullName should return a string containing the contents
 // of `firstName` and the contents of `lastName`
-function getFullName(firstName, lastName) {}
+function getFullName(firstName, lastName) {
+  return firstName + ' ' + lastName
+}
 
 // getAge should return the value of the `age` property of the
 // `obj` object
-function getAge(obj) {}
+function getAge(obj) {
+  return obj.age
+}
 
 // ageOneYear should return a new object with an `age` property 1 greater
 // than the `age` property of `obj`
-function ageOneYear(obj) {}
+function ageOneYear(obj) {
+  const newObj = { ...obj }
+  newObj.age = newObj.age + 1
+  return newObj
+}
 
 // getPropertyValue should return the value of the
 // property contained in the `key` of `obj`
@@ -56,7 +66,9 @@ function ageOneYear(obj) {}
 // }
 // then it should return 'blue'
 // Tip: Use square bracket notation
-function getPropertyValue(obj, key) {}
+function getPropertyValue(obj, key) {
+  return obj[key]
+}
 
 // makeObject should return an object that looks like this:
 // (but using the arguments passed to the function)
@@ -68,7 +80,9 @@ function getPropertyValue(obj, key) {}
 // {
 //   weather: 'sunny'
 // }
-function makeObject(key, value) {}
+function makeObject(key, value) {
+  return key + ': ' + value
+}
 
 // addName should return a copy of `obj` with the addition of a `name`
 // property that has the value of the `name` argument
