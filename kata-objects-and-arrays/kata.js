@@ -169,36 +169,75 @@ function getItemAtIndex(arr, idx) {
 // replaceItemAtIndex should return a copy of `arr` with
 // the element at `idx` replaced with `item`
 // Tip: consider the array literal spread syntax
-function replaceItemAtIndex(arr, idx, item) {}
+function replaceItemAtIndex(arr, idx, item) {
+  let newArr = [...arr]
+  newArr[idx] = item
+  return newArr
+}
 
 // insertItemAtIndex should return a copy of `arr` with `item` inserted at
 // `idx` without overwriting any array values (the array should get longer)
-function insertItemAtIndex(arr, item, idx) {}
+function insertItemAtIndex(arr, item, idx) {
+  let newArr = [...arr]
+  newArr.splice(idx, 0, item)
+  return newArr
+}
 
 // deleteItemAtIndex should return a copy of `arr` without
 // the element at `idx` (the array should get shorter).
-function deleteItemAtIndex(arr, idx) {}
+function deleteItemAtIndex(arr, idx) {
+  let newArr = [...arr]
+  newArr.splice(idx, 1)
+  return newArr
+}
 
 // deleteItem should return an array with every instance of `item` removed
-function deleteItem(arr, item) {}
+function deleteItem(arr, item) {
+  const delArr = arr.filter((x) => x !== item)
+  return delArr
+}
 
 // zipObject should return an object built from two arrays
 // For example, given ['foo', 'bar'] and [1, 2] it would return
 // { foo: 1, bar: 2 }
-function zipObject(keys, values) {}
+function zipObject(keys, values) {
+  const newObj = {}
+
+  for (let i = 0; i < keys.length; i++) {
+    newObj[keys[i]] = values[i]
+  }
+  return newObj
+}
 
 // unzipObject should return an array of arrays, each one a pair of keys and values
 // For example, given {foo: 1, bar: 2} it would return
 // [['foo', 1], ['bar', 2]]
-function unzipObject(obj) {}
+function unzipObject(obj) {
+  const keys = Object.keys(obj)
+  return keys.map((key) => [key, obj[key]])
+}
 
 // findOneByProperty should return an object from `arr` that has the
 // property AND value of `search`. For example, given:
 //   [{a: 1}, {b: 2, c: 3}] and {b: 2}
 // it will return:
 //   {b: 2, c: 3}
-function findOneByProperty(arr, search) {}
+function findOneByProperty(arr, search) {
+  const key = Object.keys(search)[0]
+  const value = search[key]
+
+  return arr.find((item) => {
+    return key in item && value == item[key]
+  })
+}
 
 // findAll should return an array containing all objects in `arr` that
 // have the property and value of `search`
-function findAll(arr, search) {}
+function findAll(arr, search) {
+  const key = Object.keys(search)[0]
+  const value = search[key]
+
+  return arr.filter((item) => {
+    return key in item && value == item[key]
+  })
+}
