@@ -1,10 +1,46 @@
 import { describe, expect, test } from 'vitest'
-import { getListenerNames } from './tasks'
+import {
+  getListenerNames,
+  getListenerGenres,
+  getArtistsNames,
+  getArtistsByGenre,
+} from './tasks'
 
 describe('listeners tests', () => {
   test('name test', () => {
     let expected = ['Debra', 'Jono', 'Stina']
     let actual = getListenerNames()
+    expect(actual).toStrictEqual(expected)
+  })
+
+  test('genres test', () => {
+    let expected = [
+      ['pop', 'chill'],
+      ['rap', 'trap'],
+      ['folk', 'trance'],
+    ]
+    let actual = getListenerGenres()
+    expect(actual).toStrictEqual(expected)
+  })
+})
+
+describe('artists and releases tests', () => {
+  test('artists name test', () => {
+    let expected = [
+      'Queen',
+      'Thievery Corporation',
+      'The Roots',
+      'Baauer',
+      'Iron & Wine',
+      'Armin van Buuren',
+      'The Beatles',
+    ]
+    let actual = getArtistsNames()
+    expect(actual).toStrictEqual(expected)
+  })
+  test('artists by genre test', () => {
+    let expected = ['Queen', 'The Beatles']
+    let actual = getArtistsByGenre('pop')
     expect(actual).toStrictEqual(expected)
   })
 })
