@@ -23,6 +23,12 @@ export function getArtistsByGenre(genre) {
     .map((artist) => artist.name)
 }
 
+export function getReleaseIDs(genreArr) {
+  return artists
+    .filter((artist) => genreArr.includes(artist.genre))
+    .flatMap((artist) => artist.releaseIds)
+}
+
 console.log(getArtistsByGenre('trance'))
 
 export default { displayListeners }

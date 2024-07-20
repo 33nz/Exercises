@@ -4,6 +4,7 @@ import {
   getListenerGenres,
   getArtistsNames,
   getArtistsByGenre,
+  getReleaseIDs,
 } from './tasks'
 
 describe('listeners tests', () => {
@@ -41,6 +42,11 @@ describe('artists and releases tests', () => {
   test('artists by genre test', () => {
     let expected = ['Queen', 'The Beatles']
     let actual = getArtistsByGenre('pop')
+    expect(actual).toStrictEqual(expected)
+  })
+  test('rap & trap artist release IDs', () => {
+    let expected = [6, 7, 8, 9]
+    let actual = getReleaseIDs(['rap', 'trap'])
     expect(actual).toStrictEqual(expected)
   })
 })
