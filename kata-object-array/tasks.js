@@ -1,5 +1,6 @@
 import listeners from './data/listeners.js'
 import artists from './data/artists.js'
+import releases from './data/releases.js'
 
 function displayListeners() {
   return listeners
@@ -27,6 +28,16 @@ export function getReleaseIDs(genreArr) {
   return artists
     .filter((artist) => genreArr.includes(artist.genre))
     .flatMap((artist) => artist.releaseIds)
+}
+
+export function getArtistReleases(artistName) {
+  let releaseIDs = artists
+    .filter((x) => x.name === artistName)
+    .flatMap((x) => x.releaseIds)
+
+  return releases
+    .filter((release) => releaseIDs.includes(release.id))
+    .map((release) => release.name)
 }
 
 console.log(getArtistsByGenre('trance'))
