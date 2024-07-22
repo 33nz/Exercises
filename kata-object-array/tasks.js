@@ -32,8 +32,8 @@ export function getReleaseIDs(genreArr) {
 
 export function getArtistReleases(artistName) {
   let releaseIDs = artists
-    .filter((x) => x.name === artistName)
-    .flatMap((x) => x.releaseIds)
+    .filter((artist) => artist.name === artistName)
+    .flatMap((artist) => artist.releaseIds)
 
   return releases
     .filter((release) => releaseIDs.includes(release.id))

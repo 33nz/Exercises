@@ -56,3 +56,11 @@ describe('artists and releases tests', () => {
     expect(actual).toStrictEqual(expected)
   })
 })
+
+describe('combined data sets tests', () => {
+  test('artists of debras genres', () => {
+    let expected = ['Queen', 'Thievery Corporation', 'The Beatles']
+    let actual = getArtistRecommendations('Debra')
+    expect(actual).toStrictEqual(expected)
+  })
+})
