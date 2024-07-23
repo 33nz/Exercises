@@ -57,9 +57,26 @@ export function getArtistRecommendations(listenerName) {
 export function getReleaseRecommendations(listenerName) {
   let listenerGenres = getSingleListenerGenres(listenerName)
 
-  return listenerGenres
-    .flatMap((artist) => getArtistsNames(artist))
-    .flatMap((artist) => getArtistReleases(artist))
+  let artistsByGenre = listenerGenres.flatMap((genre) =>
+    getArtistsByGenre(genre),
+  )
+
+  let releases = artistsByGenre.flatMap((artist) => getArtistReleases(artist))
+
+  return Array.from(new Set(releases))
+}
+
+export function getAllRecommendations() {
+  let listenerNames = getListenerNames()
+
+  let result = {}
+
+  listenerNames.forEach((x) => {
+    result[x] = {}
+    result[x]['artists'] = getArtistRecommendations(x)
+    result[x]['releases'] = getReleaseRecommendations(x)
+  })
+  return result
 }
 
 console.log(getArtistsByGenre('trance'))

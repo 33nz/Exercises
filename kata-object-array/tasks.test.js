@@ -8,6 +8,7 @@ import {
   getArtistReleases,
   getArtistRecommendations,
   getReleaseRecommendations,
+  getAllRecommendations,
 } from './tasks'
 
 describe('listeners tests', () => {
@@ -75,5 +76,25 @@ describe('combined data sets tests', () => {
     ]
     let actual = getReleaseRecommendations('Jono')
     expect(actual).toStrictEqual(expected)
+  })
+
+  test('get all recommendations', () => {
+    let jonoReleaseRecommendations = [
+      'Phrenology',
+      'The Tipping Point',
+      'Harlem Shake',
+      'Dum Dum',
+    ]
+    let debraArtistsRecommendations = [
+      'Queen',
+      'Thievery Corporation',
+      'The Beatles',
+    ]
+    let stinaArtistsRecommendations = ['Iron & Wine', 'Armin van Buuren']
+
+    let actual = getAllRecommendations()
+    expect(actual['Stina'].artists).toStrictEqual(stinaArtistsRecommendations)
+    expect(actual['Debra'].artists).toStrictEqual(debraArtistsRecommendations)
+    expect(actual['Jono'].releases).toStrictEqual(jonoReleaseRecommendations)
   })
 })
