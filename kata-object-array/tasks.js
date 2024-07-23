@@ -40,6 +40,28 @@ export function getArtistReleases(artistName) {
     .map((release) => release.name)
 }
 
+function getSingleListenerGenres(listenerName) {
+  return listeners
+    .filter((listener) => listener.name === listenerName)
+    .flatMap((listener) => listener.genres)
+}
+
+export function getArtistRecommendations(listenerName) {
+  let listenerGenres = getSingleListenerGenres(listenerName)
+
+  return artists
+    .filter((artist) => listenerGenres.includes(artist.genre))
+    .map((artist) => artist.name)
+}
+
+export function getReleaseRecommendations(listenerName) {
+  let listenerGenres = getSingleListenerGenres(listenerName)
+
+  return listenerGenres
+    .flatMap((artist) => getArtistsNames(artist))
+    .flatMap((artist) => getArtistReleases(artist))
+}
+
 console.log(getArtistsByGenre('trance'))
 
 export default { displayListeners }

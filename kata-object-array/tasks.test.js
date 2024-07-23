@@ -6,6 +6,8 @@ import {
   getArtistsByGenre,
   getReleaseIDs,
   getArtistReleases,
+  getArtistRecommendations,
+  getReleaseRecommendations,
 } from './tasks'
 
 describe('listeners tests', () => {
@@ -61,6 +63,17 @@ describe('combined data sets tests', () => {
   test('artists of debras genres', () => {
     let expected = ['Queen', 'Thievery Corporation', 'The Beatles']
     let actual = getArtistRecommendations('Debra')
+    expect(actual).toStrictEqual(expected)
+  })
+
+  test('get jonos release recommendations', () => {
+    let expected = [
+      'Phrenology',
+      'The Tipping Point',
+      'Harlem Shake',
+      'Dum Dum',
+    ]
+    let actual = getReleaseRecommendations('Jono')
     expect(actual).toStrictEqual(expected)
   })
 })
