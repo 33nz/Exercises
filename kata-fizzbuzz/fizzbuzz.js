@@ -20,8 +20,6 @@ function fizzBuzz(arr) {
       return 'Buzz'
     } else if (x % 3 === 0) {
       return 'Fizz'
-    } else if (x === NaN) {
-      return 'Bonk'
     } else {
       return x
     }
@@ -31,3 +29,16 @@ function fizzBuzz(arr) {
 console.log(fizzBuzz(arr1))
 console.log(fizzBuzz(arr2))
 console.log(fizzBuzz(arr3))
+
+// create new array function
+
+function createNewArray(length) {
+  let newArray = []
+
+  for (let i = 0; i <= length; i++) {
+    newArray.push(i)
+  }
+  return newArray
+}
+
+console.log(createNewArray(12))
