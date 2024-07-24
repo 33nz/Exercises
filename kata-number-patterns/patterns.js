@@ -21,3 +21,21 @@ export function examplePattern2(max) {
 
   return output
 }
+
+export function pattern1(max) {
+  let output = ''
+  const cols = Array(max).fill(0)
+
+  cols.forEach((item, i) => {
+    const row = Array(i + 1).fill(0)
+    for (let i in row) {
+      if (i % 2 == 0) {
+        row[i] = 1
+      }
+    }
+    output += row.join(' ') + '\n'
+  })
+  return output
+}
+
+console.log(pattern1(12))
