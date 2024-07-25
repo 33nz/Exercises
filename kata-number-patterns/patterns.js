@@ -171,3 +171,20 @@ export function pattern10(max) {
   return output
 }
 console.log(pattern10(7))
+
+export function pattern11(max) {
+  let output = ''
+  const cols = Array(max).fill(0)
+
+  cols.forEach((item, i) => {
+    let bigRowLength = 2 * i + 1
+    const row = Array(bigRowLength).fill(0)
+    for (let j in row) {
+      let numJ = Number(j)
+      row[numJ] = numJ > i ? bigRowLength - numJ : numJ + 1
+    }
+    output += row.join(' ') + '\n'
+  })
+  return output
+}
+console.log(pattern11(7))
