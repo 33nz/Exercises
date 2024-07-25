@@ -111,3 +111,63 @@ export function pattern6(max) {
   return output
 }
 console.log(pattern6(7))
+
+export function pattern7(max) {
+  let output = ''
+  const cols = Array(max).fill(0)
+
+  cols.forEach((item, i) => {
+    const row = Array(max - i).fill(0)
+    for (let j in row) {
+      row[j] = max - j
+    }
+    output += row.join(' ') + '\n'
+  })
+  return output
+}
+console.log(pattern7(7))
+
+export function pattern8(max) {
+  let output = ''
+  const cols = Array(max).fill(0)
+
+  cols.forEach((item, i) => {
+    const row = Array(max - i).fill(0)
+    for (let j in row) {
+      row[j] = Number(j) + 1
+    }
+    output += row.join(' ') + '\n'
+  })
+  return output
+}
+console.log(pattern8(12))
+
+export function pattern9(max) {
+  let output = ''
+  const cols = Array(max).fill(0)
+
+  cols.forEach((item, i) => {
+    const row = Array(max - i).fill(0)
+    for (let j in row) {
+      row[j] = max - i - j
+    }
+    output += row.join(' ') + '\n'
+  })
+  return output
+}
+console.log(pattern9(7))
+
+export function pattern10(max) {
+  let output = ''
+  const cols = Array(max).fill(0)
+
+  cols.forEach((item, i) => {
+    const row = Array(i + 1).fill(0)
+    for (let j in row) {
+      row[j] = max - j
+    }
+    output += row.join(' ') + '\n'
+  })
+  return output
+}
+console.log(pattern10(7))
