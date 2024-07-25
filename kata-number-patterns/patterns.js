@@ -68,3 +68,46 @@ export function pattern3(max) {
   return output
 }
 console.log(pattern3(7))
+
+export function pattern4(max) {
+  let output = ''
+  const cols = Array(max).fill(0)
+
+  cols.forEach((item, i) => {
+    const row = Array(i + 1).fill(0)
+
+    for (let j in row) {
+      row[j] = Number(j) + 1
+    }
+    output += row.join(' ') + '\n'
+  })
+  return output
+}
+console.log(pattern4(7))
+
+export function pattern5(max) {
+  let output = ''
+  const cols = Array(max).fill(0)
+
+  cols.forEach((item, i) => {
+    const row = Array(i + 1).fill(i + 1)
+    output += row.join(' ') + '\n'
+  })
+  return output
+}
+console.log(pattern5(7))
+
+export function pattern6(max) {
+  let output = ''
+  const cols = Array(max).fill(0)
+
+  cols.forEach((item, i) => {
+    const row = Array(i + 1).fill(1)
+    for (let j in row) {
+      row[j] = row.length - j
+    }
+    output += row.join(' ') + '\n'
+  })
+  return output
+}
+console.log(pattern6(7))
