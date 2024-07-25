@@ -188,3 +188,22 @@ export function pattern11(max) {
   return output
 }
 console.log(pattern11(7))
+
+export function pattern12(max) {
+  let output = ''
+  let bigColLength = 2 * max - 1
+  const cols = Array(bigColLength).fill(0)
+
+  cols.forEach((item, i) => {
+    let rowLength = i < max ? i + 1 : 2 * max - (i + 1)
+
+    const row = Array(rowLength).fill(0)
+    for (let j in row) {
+      let numJ = Number(j)
+      row[numJ] = numJ + 1
+    }
+    output += row.join(' ') + '\n'
+  })
+  return output
+}
+console.log(pattern12(7))
