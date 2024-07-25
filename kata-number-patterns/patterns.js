@@ -37,5 +37,34 @@ export function pattern1(max) {
   })
   return output
 }
-
 console.log(pattern1(12))
+
+export function pattern2(max) {
+  let output = ''
+  const cols = Array(max).fill(0)
+
+  cols.forEach((item, i) => {
+    const row = Array(max).fill(1)
+    row.fill(i + 1, row.length - i - 1)
+    output += row.join(' ') + '\n'
+  })
+  return output
+}
+console.log(pattern2(7))
+
+export function pattern3(max) {
+  let output = ''
+  const cols = Array(max).fill(0)
+
+  cols.forEach((item, i) => {
+    const row = Array(max).fill(0)
+    for (let j in row) {
+      if ((Number(j) + Number(i)) % 2 == 0) {
+        row[j] = 1
+      }
+    }
+    output += row.join(' ') + '\n'
+  })
+  return output
+}
+console.log(pattern3(7))
