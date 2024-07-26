@@ -13,8 +13,11 @@ import {
 
 describe('listeners tests', () => {
   test('name test', () => {
+    //arrange
     let expected = ['Debra', 'Jono', 'Stina']
+    //act(tual)
     let actual = getListenerNames()
+    //assert
     expect(actual).toStrictEqual(expected)
   })
 
@@ -31,6 +34,7 @@ describe('listeners tests', () => {
 
 describe('artists and releases tests', () => {
   test('artists name test', () => {
+    //arrange
     let expected = [
       'Queen',
       'Thievery Corporation',
@@ -40,7 +44,9 @@ describe('artists and releases tests', () => {
       'Armin van Buuren',
       'The Beatles',
     ]
+    //act
     let actual = getArtistsNames()
+    //assert
     expect(actual).toStrictEqual(expected)
   })
   test('artists by genre test', () => {
