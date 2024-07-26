@@ -238,3 +238,44 @@ export function pattern13(max) {
   return output
 }
 console.log(pattern13(7))
+
+export function pattern14(max) {
+  let output = ''
+  let bigColLength = 2 * max - 1
+  const cols = Array(bigColLength).fill(0)
+
+  cols.forEach((item, i) => {
+    const row = Array(max).fill(' ')
+    let firstJ = i < max ? i : max - (i + 2 - max)
+    for (let j in row) {
+      let numJ = Number(j)
+      if (numJ >= firstJ) {
+        row[numJ] = numJ + 1
+      }
+    }
+    output += row.join(' ') + '\n'
+  })
+  return output
+}
+console.log(pattern14(7))
+
+export function pattern15(max) {
+  let output = ''
+  const bigColLength = 2 * max - 1
+  const cols = Array(bigColLength).fill(0)
+
+  cols.forEach((item, i) => {
+    const row = Array(max).fill(' ')
+    let jOffset = i < max ? i : max - (i + 2 - max)
+    for (let j in row) {
+      let numJ = Number(j)
+      if (numJ + jOffset < row.length) {
+        row[jOffset + numJ] = numJ + 1
+      }
+    }
+    output += row.join(' ') + '\n'
+  })
+  return output
+}
+
+console.log(pattern15(7))
