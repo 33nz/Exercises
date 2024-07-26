@@ -277,5 +277,81 @@ export function pattern15(max) {
   })
   return output
 }
-
 console.log(pattern15(7))
+
+export function pattern16(max) {
+  //find longest column
+  if (max == 1) {
+    return 1
+  }
+
+  let n = 2
+  while (n ** 2 + (n - 1) ** 2 < max * 2) {
+    n++
+  }
+
+  let output = ''
+  const cols = []
+
+  let rowSize = 1
+
+  while (rowSize <= n) {
+    cols.push(Array(rowSize).fill(' '))
+    rowSize++
+  }
+
+  for (let i in cols) {
+    for (let j in cols[i]) {
+      //for the 0th column, the offset is 0; just equivalent to row number + 1
+      //for other columns, the value should be equivalent to the last value + the length of the last row - 1
+      if (j == 0) {
+        cols[i][j] = Number(i) + 1
+      } else {
+        let nextValue = cols[i][j - 1] + cols.length - j
+        if (nextValue <= max) {
+          cols[i][j] = nextValue
+        } else {
+          break
+        }
+      }
+    }
+
+    output += cols[i].join(' ') + '\n'
+  }
+  return output
+}
+console.log(pattern16(15))
+
+export function pattern17(max) {
+  let output = ''
+  const cols = Array(max).fill(0)
+
+  cols.forEach((item, i) => {
+    const row = Array(max).fill(0)
+    row[i] = i
+    output += row.join(' ') + '\n'
+  })
+  return output
+}
+console.log(pattern17(9))
+
+export function pattern18(max) {
+  let output = ''
+  let rowSize = 1
+  let i = 0
+  while (i < max) {
+    let rowIndex = 0
+    while (rowIndex < rowSize) {
+      if (i == max) {
+        return output
+      }
+      output += `${i + 1}`
+      rowIndex++
+      i++
+    }
+    output += '\n'
+    rowSize++
+  }
+  return output
+}
+console.log(pattern18(14))
