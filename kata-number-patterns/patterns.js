@@ -207,3 +207,34 @@ export function pattern12(max) {
   return output
 }
 console.log(pattern12(7))
+
+export function pattern12B(max) {
+  let output = ''
+
+  for (let i = 1; i < max * 2; i++) {
+    let rowLength = i <= max ? i : max * 2 - i
+    let row = Array.from({ length: rowLength }, (_, j) => j + 1)
+    output += row.join(' ') + '\n'
+  }
+  return output
+}
+console.log(pattern12B(7))
+
+export function pattern13(max) {
+  let output = ''
+  let bigColLength = 2 * max - 1
+  const cols = Array(bigColLength).fill(0)
+
+  cols.forEach((item, i) => {
+    let rowLength = max > i ? max - i : i - max + 2
+
+    const row = Array(rowLength).fill(0)
+    for (let j in row) {
+      let numJ = Number(j)
+      row[numJ] = numJ + 1
+    }
+    output += row.join(' ') + '\n'
+  })
+  return output
+}
+console.log(pattern13(7))
