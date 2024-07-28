@@ -11,22 +11,25 @@ export function getHomeworldClimateB(pilot) {
 }
 
 export function getFirstVehicleModel(pilot) {
-  return pilot.vehicle.model[0]
+  return pilot.vehicles[0].model
 }
 
-export function getSecondVehiclePassengers (pilot) {
+export function getSecondVehiclePassengers(pilot) {
   return pilot.vehicles[1].specs.passengers
 }
 
-export function getVehicleNames (pilot) {
-  const vehicleNames = pilot.vehicles.map(vehicle => 
-   vehicle.name
-  )
-  // Return an array of vehicle names
+export function getVehicleNames(pilot) {
+  return pilot.vehicles.map(vehicle => vehicle.name)
+}
+
+export function getVehicleNames2(pilot) {
+  const vehicleNames = pilot.vehicles.map(vehicle => {
+    return vehicle.name
+  })
   return vehicleNames
 }
 
-export function getDepreciatedVehicleValues (pilot) {
+export function getDepreciatedVehicleValues(pilot) {
   // Return an array of objects with the
   // vehicle's name and 90% of the cost:
   // e.g. { name: 'Imperial Shuttle', depreciatedValue: 216000 }
