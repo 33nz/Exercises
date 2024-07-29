@@ -30,19 +30,21 @@ export function getVehicleNames2(pilot) {
 }
 
 export function getDepreciatedVehicleValues(pilot) {
-  // Return an array of objects with the
-  // vehicle's name and 90% of the cost:
-  // e.g. { name: 'Imperial Shuttle', depreciatedValue: 216000 }
-  // const vehicleValues = pilot.vehicles.map(vehicle => {
-  //   return {
-  //     name: vehicle.name,
-  //     depricatedValue: vehicle.costInCredits * .9
-  //   }
-  // })
+
   const vehicleValues = pilot.vehicles.map(vehicle => {
     return {
       name: vehicle.name,
       depreciatedValue: vehicle.costInCredits * .9
+    }
+  })
+  return vehicleValues
+}
+
+export function getDepreciatedVehicleValuesB(pilot) {
+  const vehicleValues = pilot.vehicles.map(({name, costInCredits}) => {
+    return {
+      name,
+      depreceatedValue: costInCredits * .9
     }
   })
   return vehicleValues
