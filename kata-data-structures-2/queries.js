@@ -54,8 +54,9 @@ export function getSpeeders (pilot) {
   return pilot.vehicles.filter(vehicle => vehicle.vehicleClass === 'speeder')
 }
 
-export function getFirstSpeeder (pilot) {
-  return pilot.vehicles.find(vehicle => vehicle.vehicleClass === 'speeder')
+export function getFirstSpeeder(pilot) {
+  const speeder = pilot.vehicles.find(vehicle => vehicle.vehicleClass === 'speeder')
+  return speeder.name
 }
 
 export function getTotalCrew (pilot) {  
