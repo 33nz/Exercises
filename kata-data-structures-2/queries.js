@@ -39,10 +39,10 @@ export function getDepreciatedVehicleValues(pilot) {
   //     depricatedValue: vehicle.costInCredits * .9
   //   }
   // })
-  const vehicleValues = pilot.vehicles.map(({name, costInCredits}) => {
+  const vehicleValues = pilot.vehicles.map(vehicle => {
     return {
-      name,
-      depreciatedValue: costInCredits * .9
+      name: vehicle.name,
+      depreciatedValue: vehicle.costInCredits * .9
     }
   })
   return vehicleValues
