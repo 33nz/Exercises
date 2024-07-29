@@ -14,9 +14,8 @@ import * as queries from './queries.js'
 // const result = queries.getFirstSpeeder(luke)
 // const result = queries.getTotalCrew(luke)
 // const result = queries.getHomeworldSpecsList(luke)
-const result = queries.getHomeworldSpecsValues(luke)
-// const result = queries.getHomeworldSpecsList(luke)
-// const result = queries.getDejarikValue(0, 4)
+// const result = queries.getHomeworldSpecsValues(luke)
+const result = queries.getDejarikValue(0, 4)
 // const result = queries.getDejarikValue(0, 2)
 
 console.log('result:', result)

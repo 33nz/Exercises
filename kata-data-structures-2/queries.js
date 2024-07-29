@@ -72,15 +72,11 @@ export function getHomeworldSpecsValues(pilot) {
 }
 
 const dejarik = [                                                                
-  [ null, null, 'MS', null, 'GT', null, 'MN', null, null, 'KS', null, 'GH' ],    // MS = Mantellian Savrip
-  [ null, 'NO', null, null, null, null, null, 'HJ', null, null, 'KL', null ],    // GT = Grimtaash the Molator
-  [ null ]                                                                       // GH = Ghhhk
-]                                                                                // HJ = Houjix
-//                                                                                  // NO = Ng'ok
-//                                                                                  // KS = Kintan strider
-//                                                                                  // KL = K'lor'slug 
-//                                                                                  // MN = M'onnok
+  [ null, null, 'MS', null, 'GT', null, 'MN', null, null, 'KS', null, 'GH' ],    
+  [ null, 'NO', null, null, null, null, null, 'HJ', null, null, 'KL', null ],           
+  [ null ]                                                                       
+]                                                                                
 
-export function getDejarikValue (row, column) {
+export function getDejarikValue(row, column) {
   return dejarik[row][column]
 }
