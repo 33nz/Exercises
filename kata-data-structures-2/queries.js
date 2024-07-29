@@ -59,12 +59,16 @@ export function getFirstSpeeder(pilot) {
   return speeder.name
 }
 
-export function getTotalCrew (pilot) {  
+export function getTotalCrew(pilot) {  
   return pilot.vehicles.reduce((accumulator, vehicle) => accumulator + vehicle.specs.crew, 0)
 }
 
-export function getHomeworldSpecsList (pilot) {  
+export function getHomeworldSpecsList(pilot) {  
   return Object.keys(pilot.homeworld)
+}
+
+export function getHomeworldSpecsValues(pilot) {
+  return Object.entries(pilot.homeworld)
 }
 
 const dejarik = [                                                                
