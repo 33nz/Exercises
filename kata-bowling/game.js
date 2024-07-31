@@ -71,7 +71,52 @@ const frames = [
 //   [10, 10, 10],
 // ]
 
-console.log(scoreBowling(frames))
+function isStrike(frame) {
+  return frame[0] === 10
+}
+
+function isSpare(frame) {
+  return frame[0] + frame[1] === 10 && frame[0] !== 10
+}
+
+function evaluateFrames(frames) {
+  const evaluated = []
+
+  for (let frame of frames) {
+    evaluated.push({
+      frame: frame,
+      isStrike: isStrike(frame),
+      isSpare: isSpare(frame),
+    })
+  }
+  return evaluated
+}
+
+function getNextTwoBowlsValue(evalutedFrames, currentIndex) {
+  let bowls = [...evalutedFrames[currentIndex + 1].frame]
+
+  if (evalutedFrames[currentIndex + 1].isStrike) {
+    if (currentIndex === 8) {
+      bowls.pop()
+    } else {
+      bowls[1] = evalutedFrames[currentIndex + 2].frame[0]
+    }
+  }
+  return bowls[0] + bowls[1]
+}
+
+function handleLastFrame(lastFrame) {
+  let score = 0
+  if (lastFrame.isSpare) {
+    score += 10 + lastFrame.frame[2]
+  } else if (lastFrame.isStrike) {
+    score += 10 + lastFrame.frame[1] + lastFrame.frame[2]
+  } else {
+    score += lastFrame.frame[0] + lastFrame.frame[1]
+  }
+
+  return score
+}
 
 function scoreBowling(frames) {
   let score = 0
@@ -98,49 +143,4 @@ function scoreBowling(frames) {
   return score
 }
 
-function handleLastFrame(lastFrame) {
-  let score = 0
-  if (lastFrame.isSpare) {
-    score += 10 + lastFrame.frame[2]
-  } else if (lastFrame.isStrike) {
-    score += 10 + lastFrame.frame[1] + lastFrame.frame[2]
-  } else {
-    score += lastFrame.frame[0] + lastFrame.frame[1]
-  }
-
-  return score
-}
-
-function getNextTwoBowlsValue(evalutedFrames, currentIndex) {
-  let bowls = [...evalutedFrames[currentIndex + 1].frame]
-
-  if (evalutedFrames[currentIndex + 1].isStrike) {
-    if (currentIndex === 8) {
-      bowls.pop()
-    } else {
-      bowls[1] = evalutedFrames[currentIndex + 2].frame[0]
-    }
-  }
-  return bowls[0] + bowls[1]
-}
-
-function evaluateFrames(frames) {
-  const evaluated = []
-
-  for (let frame of frames) {
-    evaluated.push({
-      frame: frame,
-      isStrike: isStrike(frame),
-      isSpare: isSpare(frame),
-    })
-  }
-  return evaluated
-}
-
-function isStrike(frame) {
-  return frame[0] === 10
-}
-
-function isSpare(frame) {
-  return frame[0] + frame[1] === 10 && frame[0] !== 10
-}
+console.log(scoreBowling(frames))
