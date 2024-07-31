@@ -44,32 +44,32 @@
 // ]
 //
 // Score 141 (includes a strike on the last frame):
-// const frames = [
-//   [1, 2],
-//   [6, 4],
-//   [5, 4],
-//   [10, 0],
-//   [7, 2],
-//   [10, 0],
-//   [10, 0],
-//   [5, 2],
-//   [7, 0],
-//   [10, 10, 10],
-// ]
-//
-// Score 300 (perfect game):
 const frames = [
+  [1, 2],
+  [6, 4],
+  [5, 4],
+  [10, 0],
+  [7, 2],
   [10, 0],
   [10, 0],
-  [10, 0],
-  [10, 0],
-  [10, 0],
-  [10, 0],
-  [10, 0],
-  [10, 0],
-  [10, 0],
+  [5, 2],
+  [7, 0],
   [10, 10, 10],
 ]
+//
+// Score 300 (perfect game):
+// const frames = [
+//   [10, 0],
+//   [10, 0],
+//   [10, 0],
+//   [10, 0],
+//   [10, 0],
+//   [10, 0],
+//   [10, 0],
+//   [10, 0],
+//   [10, 0],
+//   [10, 10, 10],
+// ]
 
 console.log(scoreBowling(frames))
 
@@ -78,7 +78,7 @@ function scoreBowling(frames) {
 
   const evaluatedFrames = evaluateFrames(frames)
 
-  // handle first 9 frames
+  //handle first 9 frames
   for (let i = 0; i < 9; i++) {
     const currentFrame = evaluatedFrames[i]
     const nextFrame = evaluatedFrames[i + 1]
@@ -91,8 +91,7 @@ function scoreBowling(frames) {
       score += getNextTwoBowlsValue(evaluatedFrames, i)
     }
   }
-  // handle last frame
-
+  //handle last frame
   const lastFrame = evaluatedFrames[evaluatedFrames.length - 1]
   score += handleLastFrame(lastFrame)
 
@@ -104,21 +103,22 @@ function handleLastFrame(lastFrame) {
   if (lastFrame.isSpare) {
     score += 10 + lastFrame.frame[2]
   } else if (lastFrame.isStrike) {
-    score += 10 + lastFrame[1] + lastFrame[2]
+    score += 10 + lastFrame.frame[1] + lastFrame.frame[2]
   } else {
     score += lastFrame.frame[0] + lastFrame.frame[1]
   }
+
   return score
 }
 
-function getNextTwoBowlsValue(evaluatedFrames, currentIndex) {
-  let bowls = [...evaluatedFrames[currentIndex + 1].frame]
+function getNextTwoBowlsValue(evalutedFrames, currentIndex) {
+  let bowls = [...evalutedFrames[currentIndex + 1].frame]
 
-  if (evaluatedFrames[currentIndex + 1].isStrike) {
+  if (evalutedFrames[currentIndex + 1].isStrike) {
     if (currentIndex === 8) {
       bowls.pop()
     } else {
-      bowls[1] = evaluatedFrames[currentIndex + 2].frame[0]
+      bowls[1] = evalutedFrames[currentIndex + 2].frame[0]
     }
   }
   return bowls[0] + bowls[1]
