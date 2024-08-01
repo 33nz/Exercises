@@ -2,13 +2,26 @@
 const arr = [1, 2, 3, 4, 5, 6]
 
 // use for loop over the array and console log each item
-for (let num of arr) {
-  console.log(num)
+for (let item of arr) {
+  console.log(item)
 }
 
 // use arr.forEach to do the same thing
+arr.forEach((num) => {
+  console.log(num)
+})
+//or
+arr.forEach((x) => console.log(x))
 
 // use arr.map to return an array where each item has had 1 added to it
+arr.map(function fn(x) {
+  return x + 1
+})
+//or
+arr.map((num) => {
+  const result = num + 1
+  console.log(result)
+})
 
 // use arr.filter to return an array with only even numbers
 
