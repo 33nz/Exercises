@@ -1,7 +1,10 @@
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
 const arr = [1, 2, 3, 4, 5, 6]
 
 // use for loop over the array and console log each item
+for (let num of arr) {
+  console.log(num)
+}
 
 // use arr.forEach to do the same thing
 
