@@ -22,6 +22,12 @@ arr.map((num) => {
   const result = num + 1
   console.log(result)
 })
+//solved with reduce
+const plusArr = arr.reduce((accumulator, currentValue) => {
+  accumulator.push(currentValue + 1)
+  return accumulator
+}, [])
+console.log(plusArr)
 
 // use arr.filter to return an array with only even numbers
 const evenArr = arr.filter((num) => num % 2 === 0)
