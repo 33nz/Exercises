@@ -24,6 +24,8 @@ arr.map((num) => {
 })
 
 // use arr.filter to return an array with only even numbers
+const evenArr = arr.filter((num) => num % 2 === 0)
+console.log(evenArr)
 
 // use arr.find to return the first number > 4
 
