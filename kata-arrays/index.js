@@ -26,6 +26,14 @@ arr.map((num) => {
 // use arr.filter to return an array with only even numbers
 const evenArr = arr.filter((num) => num % 2 === 0)
 console.log(evenArr)
+//or with reduce
+const evenArrReduce = arr.reduce((accumulator, num) => {
+  if (num % 2 === 0) {
+    accumulator.push(num)
+  }
+  return accumulator
+}, [])
+console.log(evenArrReduce)
 
 // use arr.find to return the first number > 4
 const four = arr.find((x) => x === 4)
@@ -44,12 +52,6 @@ const total = arr.reduce(
 console.log(total)
 
 // use arr.reduce to replicate the map, filter and find functionality
-arr.reduce((sum, y) => {
-  if (y > 4) {
-    sum.push(y)
-  }
-  return sum
-}, [])
 
 // refactor your code so that
 // - at least one function is defined as an anonymous function e.g. arr.map(function fnName(item) {???})
