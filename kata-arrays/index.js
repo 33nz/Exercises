@@ -30,6 +30,11 @@ console.log(evenArr)
 // use arr.find to return the first number > 4
 const four = arr.find((x) => x === 4)
 console.log(four)
+//or wit reduce
+const reducedFour = arr.reduce((accumulator, currentValue) =>
+  currentValue === 4 ? accumulator + 4 : accumulator + 0,
+)
+console.log(reducedFour)
 
 // use arr.reduce to sum the total of the array
 const total = arr.reduce(
@@ -39,6 +44,12 @@ const total = arr.reduce(
 console.log(total)
 
 // use arr.reduce to replicate the map, filter and find functionality
+arr.reduce((sum, y) => {
+  if (y > 4) {
+    sum.push(y)
+  }
+  return sum
+}, [])
 
 // refactor your code so that
 // - at least one function is defined as an anonymous function e.g. arr.map(function fnName(item) {???})
