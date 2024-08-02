@@ -28,8 +28,15 @@ const evenArr = arr.filter((num) => num % 2 === 0)
 console.log(evenArr)
 
 // use arr.find to return the first number > 4
+const four = arr.find((x) => x === 4)
+console.log(four)
 
 // use arr.reduce to sum the total of the array
+const total = arr.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  0,
+)
+console.log(total)
 
 // use arr.reduce to replicate the map, filter and find functionality
 
