@@ -11,3 +11,5 @@ setTimeout(() => {
   displayBoard(board)
   board = nextBoard(board)
 }, refreshInterval)
+
+//mock pseudo code
