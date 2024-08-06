@@ -14,12 +14,18 @@ export function getFullName(firstName: string, lastName: string): string {
 }
 
 // addNumbers should return the sum of the two parameters
-export function addNumbers(): void {}
+export function addNumbers(a: number, b: number): number {
+  return a + b
+}
 
 // bottlesOfBeerOnTheWall should return a string containing
 // the number of bottles of beer on the wall, but!
 // if the number of bottles is 0, it should return 'No more bottles of beer on the wall'
-export function bottlesOfBeerOnTheWall(): void {}
+export function bottlesOfBeerOnTheWall(bottles: number): string {
+  return bottles > 0
+    ? `${bottles} bottles of beer on the wall`
+    : 'No more bottles of beer on the wall'
+}
 
 // printGreeting should not return a value,
 // instead it should console.log a string containing 'Hello World'
