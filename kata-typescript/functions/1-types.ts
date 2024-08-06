@@ -9,7 +9,9 @@ export function getGreeting(name: string): string {
 
 // getFullName should return a string containing the contents
 // of `firstName` and the contents of `lastName`
-export function getFullName(firstName: string, lastName: string): void {}
+export function getFullName(firstName: string, lastName: string): string {
+  return firstName + ' ' + lastName
+}
 
 // addNumbers should return the sum of the two parameters
 export function addNumbers(): void {}
