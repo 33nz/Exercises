@@ -29,7 +29,9 @@ export function bottlesOfBeerOnTheWall(bottles: number): string {
 
 // printGreeting should not return a value,
 // instead it should console.log a string containing 'Hello World'
-export function printGreeting(): void {}
+export function printGreeting(): void {
+  console.log('Hello World')
+}
 
 // ----------- OPTIONAL PARAMS -----------
 
