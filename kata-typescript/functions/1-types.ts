@@ -37,7 +37,12 @@ export function printGreeting(): void {
 
 // sumFrame accepts two balls as parameters and returns the sum of the two numbers
 // sometimes there may be a third ball, if there is, add it to the sum
-export function sumFrame(): void {}
+export function sumFrame(ball1: number, ball2: number, ball3?: number): number {
+  if (ball3 === undefined) {
+    ball3 = 0
+  }
+  return ball1 + ball2 + ball3
+}
 
 // greetFullName should return a string starting with "Hello" containing the full name
 // including middle name if it exists
