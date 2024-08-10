@@ -47,7 +47,15 @@ export function sumFrame(ball1: number, ball2: number, ball3?: number): number {
 // greetFullName should return a string starting with "Hello" containing the full name
 // including middle name if it exists
 // e.g. "Hello John Jakob Jingleheimer-Schmidt"
-export function greetFullName(): void {}
+export function greetFullName(
+  firstName: string,
+  lastName: string,
+  middleName?: string,
+): string {
+  return middleName == undefined
+    ? `Hello ${firstName} ${lastName}`
+    : `Hello ${firstName} ${middleName} ${lastName}`
+}
 
 // ----------- UNIONS -----------
 
