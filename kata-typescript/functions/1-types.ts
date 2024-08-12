@@ -61,7 +61,12 @@ export function greetFullName(
 
 // addNumbersAndStrings accepts two arguments that can be either a number or a number inside a string
 // the sum of the two arguments should be returned as a number regardless of their original type
-export function addNumbersAndStrings(): void {}
+export function addNumbersAndStrings(
+  a: string | number,
+  b: string | number,
+): number {
+  return Number(a) + Number(b)
+}
 
 // fizzbuzz accepts a number and returns a string or number
 // if the number is divisible by 3, return 'fizz'
