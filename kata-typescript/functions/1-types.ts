@@ -73,7 +73,17 @@ export function addNumbersAndStrings(
 // if the number is divisible by 5, return 'buzz'
 // if the number is divisible by 3 and 5, return 'fizzbuzz'
 // otherwise, return the original number
-export function fizzbuzz(): void {}
+export function fizzbuzz(num: string | number): string | number {
+  if (Number(num) % 15 === 0) {
+    return 'fizzbuzz'
+  } else if (Number(num) % 5 === 0) {
+    return 'buzz'
+  } else if (Number(num) % 3 === 0) {
+    return 'fizz'
+  } else {
+    return Number(num)
+  }
+}
 
 // ----------- TYPE ALIASES -----------
 
