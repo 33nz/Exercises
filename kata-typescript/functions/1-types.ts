@@ -92,7 +92,18 @@ type StringOrNumber = void
 // sumMatchingType accepts two arguments that can be either a number or a string
 // if both arguments are numbers, the sum of the two arguments should be returned as a number
 // if either argument is a string, the two arguments should be summed together and returned as a string
-export function sumMatchingType(): void {}
+export function sumMatchingType(
+  a: string | number,
+  b: string | number,
+): number | string {
+  const result = Number(a) + Number(b)
+
+  if (typeof a == 'number' && typeof b == 'number') {
+    return result
+  } else {
+    return `${result}`
+  }
+}
 
 // getNextTrafficLightColour accepts the current colour of a traffic light colour and returns the next colour
 // the light sequence is green -> yellow -> red -> green -> yellow -> (etc)
