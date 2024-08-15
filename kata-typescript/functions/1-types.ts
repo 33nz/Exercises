@@ -41,6 +41,7 @@ export function sumFrame(ball1: number, ball2: number, ball3?: number): number {
   if (ball3 === undefined) {
     ball3 = 0
   }
+
   return ball1 + ball2 + ball3
 }
 
@@ -52,7 +53,7 @@ export function greetFullName(
   lastName: string,
   middleName?: string,
 ): string {
-  return middleName == undefined
+  return middleName === undefined
     ? `Hello ${firstName} ${lastName}`
     : `Hello ${firstName} ${middleName} ${lastName}`
 }
@@ -73,15 +74,15 @@ export function addNumbersAndStrings(
 // if the number is divisible by 5, return 'buzz'
 // if the number is divisible by 3 and 5, return 'fizzbuzz'
 // otherwise, return the original number
-export function fizzbuzz(num: string | number): string | number {
-  if (Number(num) % 15 === 0) {
+export function fizzbuzz(number: number): string | number {
+  if (number % 15 === 0) {
     return 'fizzbuzz'
-  } else if (Number(num) % 5 === 0) {
+  } else if (number % 5 === 0) {
     return 'buzz'
-  } else if (Number(num) % 3 === 0) {
+  } else if (number % 3 === 0) {
     return 'fizz'
   } else {
-    return Number(num)
+    return number
   }
 }
 
@@ -93,15 +94,15 @@ type StringOrNumber = void
 // if both arguments are numbers, the sum of the two arguments should be returned as a number
 // if either argument is a string, the two arguments should be summed together and returned as a string
 export function sumMatchingType(
-  a: string | number,
-  b: string | number,
-): number | string {
+  a: number | string,
+  b: number | string,
+): string | number {
   const result = Number(a) + Number(b)
 
   if (typeof a == 'number' && typeof b == 'number') {
     return result
   } else {
-    return `${result}`
+    return String(result)
   }
 }
 
