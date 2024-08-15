@@ -1,8 +1,12 @@
 // getNextNum should return the first number in the array
-export function getNextNum(): void {}
+export function getNextNum(arr: number[]): number {
+  return arr[0]
+}
 
 // getLastSongPlayed should return the last song in the array
-export function getLastSongPlayed(): void {}
+export function getLastSongPlayed(arr: string[]): string {
+  return arr[arr.length - 1]
+}
 
 // findLongestWord should return the longest word in the array
 export function findLongestWord(): void {}
