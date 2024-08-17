@@ -26,7 +26,13 @@ export function fillArrayWithBees(bees: number): string[] {
 }
 
 // sortBySize should return an array of strings sorted by length
-export function sortBySize(): void {}
+export function sortBySize(arr: string[]): string[] {
+  let newArr: string[] = []
+
+  newArr = arr.slice().sort((a, b) => a.length - b.length)
+
+  return newArr
+}
 
 // ----------- ARRAYS WITH UNIONS -----------
 // Note: as we are dealing with multiple types in these arrays, TS may have a harder time inferring
