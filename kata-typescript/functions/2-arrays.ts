@@ -42,7 +42,14 @@ export function sortBySize(arr: string[]): string[] {
 
 // sumStringsAndNumbers should return the sum of all the items in the array
 // regardless of whether they are strings or numbers
-export function sumStringsAndNumbers(): void {}
+export function sumStringsAndNumbers(arr: (string | number)[]): number {
+  return Number(
+    arr.reduce(
+      (accumulator, currentValue) => Number(accumulator) + Number(currentValue),
+      0,
+    ),
+  )
+}
 
 // stringsOnly will be passed an array of strings and some null values
 // it should return a new array with all the null values removed - strings only!
