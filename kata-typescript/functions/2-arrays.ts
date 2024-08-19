@@ -53,7 +53,9 @@ export function sumStringsAndNumbers(arr: (string | number)[]): number {
 
 // stringsOnly will be passed an array of strings and some null values
 // it should return a new array with all the null values removed - strings only!
-export function stringsOnly(): void {}
+export function stringsOnly(arr: (string | null)[]): string[] {
+  return arr.filter((value) => typeof value == 'string') as string[]
+}
 
 // ----------- TUPLES -----------
 
