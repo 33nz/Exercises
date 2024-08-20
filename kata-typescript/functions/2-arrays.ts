@@ -64,11 +64,7 @@ export function stringsOnly(arr: (string | null)[]): string[] {
 // e.g. generateUsername(['John', 'Smith', 1980]) should return 'smithjo_1980'
 // e.g. generateUsername(['Jane', 'Doe', 1965]) should return 'doeja_1965'
 export function generateUsername(arr: [string, string, number]): string {
-  const lastName = arr[1].toLowerCase()
-  const year = arr[2]
-  const firstName = arr[0].slice(0, 2).toLowerCase()
-
-  return `${lastName}${firstName}_${year}`
+  return arr[1].toLowerCase() + arr[0].slice(0, 2).toLowerCase() + '_' + arr[2]
 }
 
 // getNextMapCoord should return the next coordinate in the direction specified
