@@ -1,8 +1,14 @@
-interface Contact {}
+interface Contact {
+  id: number
+  name: string
+  address: string
+}
 
 // getAddress returns the address of a contact object
 // contacts have an id, name, and address that will need to be added to the interface above
-export function getAddress(): void {}
+export function getAddress(obj: Contact): string {
+  return obj.address
+}
 
 // howManyFriends is passed an array of contacts
 // it should return the number of contacts in the given array
