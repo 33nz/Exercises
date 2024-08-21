@@ -12,7 +12,9 @@ export function getAddress(obj: Contact): string {
 
 // howManyFriends is passed an array of contacts
 // it should return the number of contacts in the given array
-export function howManyFriends(): void {}
+export function howManyFriends(arr: Contact[]): number {
+  return arr.length
+}
 
 // findTheBat is passed an array of contacts
 // and returns the address of Batman
