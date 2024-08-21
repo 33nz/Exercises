@@ -72,4 +72,25 @@ export function generateUsername(arr: [string, string, number]): string {
 // e.g. getNextMapCoord([0, 0], 'S') should return [0, -1]
 // e.g. getNextMapCoord([0, 0], 'E') should return [1, 0]
 // e.g. getNextMapCoord([0, 0], 'W') should return [-1, 0]
-export function getNextMapCoord(): void {}
+export function getNextMapCoord(coord: number[], direction: string): number[] {
+  const nextCoord: [number, number] = [coord[0], coord[1]]
+
+  switch (direction) {
+    case 'N':
+      nextCoord[1] += 1
+      break
+    case 'S':
+      nextCoord[1] -= 1
+      break
+    case 'E':
+      nextCoord[0] += 1
+      break
+    case 'W':
+      nextCoord[0] -= 1
+      break
+    default:
+      nextCoord
+  }
+
+  return nextCoord
+}
