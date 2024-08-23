@@ -20,9 +20,14 @@ export function howManyFriends(arr: Contact[]): number {
 // and returns the address of Batman
 // or null if there is no Batman
 export function findTheBat(contacts: Contact[]): string | null {
-  const batman: Contact | undefined = contacts.find((x) => x.name === 'Batman')
+  let address = null
 
-  return typeof batman === 'undefined' ? null : batman.address
+  contacts.map((x) => {
+    if (x.name == 'Batman') {
+      address = x.address
+    }
+  })
+  return address
 }
 
 // ----------- OPTIONAL VS REQUIRED KEYS -----------
