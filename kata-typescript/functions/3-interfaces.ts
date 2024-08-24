@@ -34,7 +34,7 @@ export function findTheBat(contacts: Contact[]): string | null {
 
 // generateNewUser is passed a name
 // it should return a new (unverified) user object
-export function generateNewUser(): void {}
+export function generateNewUser(name: Objectß): void {}
 
 // verifyUser is passed a User object and an email
 // it should return a new User object with an email and verified set to true
