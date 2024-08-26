@@ -51,7 +51,14 @@ export function generateNewUser(userName: string): User {
 
 // verifyUser is passed a User object and an email
 // it should return a new User object with an email and verified set to true
-export function verifyUser(): void {}
+export function verifyUser(userObject: User, userEmail: string): User {
+  const verifiedUser: User = {
+    name: userObject.name,
+    verified: true,
+    email: userEmail,
+  }
+  return verifiedUser
+}
 
 // updateUserPhoto is passed a User object and a picture url
 // it should return a new User object with the picture set to the given url
