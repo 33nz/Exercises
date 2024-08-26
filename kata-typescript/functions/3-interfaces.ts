@@ -71,7 +71,9 @@ export function updateUserPhoto(user: User, picture: string): User {
 // getUserPhoto is passed a User object
 // it should return the picture if it exists
 // otherwise it should return a link to a kitten -> https://placekitten.com/200/300
-export function getUserPhoto(): void {}
+export function getUserPhoto(user: User): string {
+  return user.picture ? user.picture : 'https://placekitten.com/200/300'
+}
 
 // ----------- RECORDS -----------
 
