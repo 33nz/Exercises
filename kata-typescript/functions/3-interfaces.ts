@@ -72,7 +72,9 @@ export function updateUserPhoto(user: User, picture: string): User {
 // it should return the picture if it exists
 // otherwise it should return a link to a kitten -> https://placekitten.com/200/300
 export function getUserPhoto(user: User): string {
-  return user.picture ? user.picture : 'https://placekitten.com/200/300'
+  return typeof user.picture === 'undefined'
+    ? 'https://placekitten.com/200/300'
+    : user.picture
 }
 
 // ----------- RECORDS -----------
