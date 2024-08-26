@@ -32,10 +32,21 @@ export function findTheBat(contacts: Contact[]): string | null {
 
 // ----------- OPTIONAL VS REQUIRED KEYS -----------
 
+interface User {
+  name: string
+  verified: boolean
+  picture?: string
+  email?: string
+}
+
 // generateNewUser is passed a name
 // it should return a new (unverified) user object
-export function generateNewUser(name: string): User {}
-{
+export function generateNewUser(userName: string): User {
+  const newUser: User = {
+    name: userName,
+    verified: false,
+  }
+  return newUser
 }
 
 // verifyUser is passed a User object and an email
