@@ -81,4 +81,12 @@ export function getUserPhoto(user: User): string {
 // an object with numbers as keys and Users as values
 // getUser should return the user with the given id
 // or null if there is no user with that id
-export function getUser(): void {}
+export function getUser(
+  id: number,
+  records: { [key: number]: User },
+): User | null {
+  if (id in records) {
+    return records[id]
+  }
+  return null
+}
