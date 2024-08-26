@@ -63,12 +63,9 @@ export function verifyUser(userObject: User, userEmail: string): User {
 // updateUserPhoto is passed a User object and a picture url
 // it should return a new User object with the picture set to the given url
 export function updateUserPhoto(user: User, picture: string): User {
-  const updatedUser: User = {
-    name: user.name,
-    verified: user.verified,
-    picture: picture,
-  }
-  return updatedUser
+  const newUser = { ...user }
+  newUser.picture = picture
+  return newUser
 }
 
 // getUserPhoto is passed a User object
