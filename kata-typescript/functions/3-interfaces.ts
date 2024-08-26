@@ -62,7 +62,14 @@ export function verifyUser(userObject: User, userEmail: string): User {
 
 // updateUserPhoto is passed a User object and a picture url
 // it should return a new User object with the picture set to the given url
-export function updateUserPhoto(): void {}
+export function updateUserPhoto(user: User, picture: string): User {
+  const updatedUser: User = {
+    name: user.name,
+    verified: user.verified,
+    picture: picture,
+  }
+  return updatedUser
+}
 
 // getUserPhoto is passed a User object
 // it should return the picture if it exists
