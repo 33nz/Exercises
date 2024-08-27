@@ -3,7 +3,9 @@
 // callsFunction should not return anything
 // callsFunction should accept a function as a parameter and call the given function
 // the given function takes no arguments and does not return a value
-export function callsFunction(): void {}
+export function callsFunction(fn: () => void): void {
+  fn()
+}
 
 // wait should not return a value, but accepts a number and a function as parameters
 // it should call the function after the given number of milliseconds
