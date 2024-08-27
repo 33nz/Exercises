@@ -9,7 +9,9 @@ export function callsFunction(fn: () => void): void {
 
 // wait should not return a value, but accepts a number and a function as parameters
 // it should call the function after the given number of milliseconds
-export function wait(): void {}
+export function wait(num: number, fn: () => void): void {
+  setTimeout(fn, num)
+}
 
 // getIsTypeFn should accept a string as a parameter and return a function
 // the returned function should accept a value (of any type) and return a boolean if
