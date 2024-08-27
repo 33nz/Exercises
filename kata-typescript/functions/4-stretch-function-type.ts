@@ -16,7 +16,11 @@ export function wait(num: number, fn: () => void): void {
 // getIsTypeFn should accept a string as a parameter and return a function
 // the returned function should accept a value (of any type) and return a boolean if
 // the type of the value matches the string passed into getIsTypeFn
-export function getIsTypeFn(): void {}
+export function getIsTypeFn(string: string): (x: unknown) => boolean {
+  return function (x) {
+    return typeof x == string
+  }
+}
 
 // getCapitaliseFn should return a function
 // the returned function should accept a string and return a string with the first letter capitalised
