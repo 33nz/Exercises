@@ -24,4 +24,8 @@ export function getIsTypeFn(string: string): (x: unknown) => boolean {
 
 // getCapitaliseFn should return a function
 // the returned function should accept a string and return a string with the first letter capitalised
-export function getCapitaliseFn(): void {}
+export function getCapitaliseFn(): (str: string) => string {
+  return function (str) {
+    return str.length > 0 ? str[0].toUpperCase() + str.slice(1) : ''
+  }
+}
