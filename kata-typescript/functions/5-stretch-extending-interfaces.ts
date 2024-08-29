@@ -8,7 +8,9 @@ interface Vehicle {
 
 // getVehicle should return a Vehicle object
 // it is passed a make, model, and year as parameters
-export function getVehicle(): void {}
+export function getVehicle(make: string, model: string, year: number): Vehicle {
+  return { make: make, model: model, year: year }
+}
 
 // getCar should return a Car object (extension of Vehicle)
 // it is passed a make, model, year, and the number of doors as parameters
