@@ -10,6 +10,10 @@ interface Car extends Vehicle {
   doors: number
 }
 
+interface Motorcycle extends Vehicle {
+  sidecar: boolean
+}
+
 // getVehicle should return a Vehicle object
 // it is passed a make, model, and year as parameters
 export function getVehicle(make: string, model: string, year: number): Vehicle {
@@ -29,7 +33,14 @@ export function getCar(
 
 // getMotorcycle should return a Motorcycle object (extension of Vehicle)
 // it is passed a make, model, year, and whether there is a sidecar as parameters
-export function getMotorcycle(): void {}
+export function getMotorcycle(
+  make: string,
+  model: string,
+  year: number,
+  sidecar: boolean,
+): Motorcycle {
+  return { make: make, model: model, year: year, sidecar: sidecar }
+}
 
 // getTruck should return a Truck object (extension of Vehicle)
 // it is passed a make, model, year, the number of wheels, and whether it has a trailer as parameters
