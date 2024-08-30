@@ -14,6 +14,11 @@ interface Motorcycle extends Vehicle {
   sidecar: boolean
 }
 
+interface Truck extends Vehicle {
+  wheels: number
+  trailer: boolean
+}
+
 // getVehicle should return a Vehicle object
 // it is passed a make, model, and year as parameters
 export function getVehicle(make: string, model: string, year: number): Vehicle {
@@ -44,7 +49,21 @@ export function getMotorcycle(
 
 // getTruck should return a Truck object (extension of Vehicle)
 // it is passed a make, model, year, the number of wheels, and whether it has a trailer as parameters
-export function getTruck(): void {}
+export function getTruck(
+  make: string,
+  model: string,
+  year: number,
+  wheels: number,
+  trailer: boolean,
+): Truck {
+  return {
+    make: make,
+    model: model,
+    year: year,
+    wheels: wheels,
+    trailer: trailer,
+  }
+}
 
 // generateVehicles should return an array of predefined vehicles (check the test for more info)
 // it should use the functions above to generate the vehicles
