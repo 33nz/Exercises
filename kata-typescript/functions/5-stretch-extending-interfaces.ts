@@ -67,7 +67,15 @@ export function getTruck(
 
 // generateVehicles should return an array of predefined vehicles (check the test for more info)
 // it should use the functions above to generate the vehicles
-export function generateVehicles(): void {}
+export function generateVehicles(): Vehicle[] {
+  return [
+    getVehicle('Ford', 'F-150', 2019),
+    getCar('Chevy', 'Camaro', 2020, 2),
+    getCar('Toyota', 'Prius', 2018, 4),
+    getMotorcycle('Harley-Davidson', 'Sportster', 2019, true),
+    getTruck('Ford', 'F-150', 2019, 4, false),
+  ]
+}
 
 // ----------- DEFINED KEYS -----------
 
