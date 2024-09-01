@@ -95,9 +95,19 @@ export function createUserObj(
   }
 }
 
+interface User {
+  name: string
+  email: string
+  picture?: string
+  role: string
+}
+
 // upgradeToAdmin will be passed a user object
 // it should alter the role property to be 'admin' and return the object
-export function upgradeToAdmin(): void {}
+export function upgradeToAdmin(user: User): User {
+  user.role = 'admin'
+  return user
+}
 
 // isUserAdmin will be passed a user object
 // it should return true if the role is 'admin' and false if it is not
