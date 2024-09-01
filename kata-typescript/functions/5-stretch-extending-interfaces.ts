@@ -82,7 +82,18 @@ export function generateVehicles(): Vehicle[] {
 // createUserObj will be passed a name and an email
 // it will sometimes be passed a picture as a third parameter
 // it should return an object with the above properties and a role defined as 'user' and return that object
-export function createUserObj(): void {}
+export function createUserObj(
+  name: string,
+  email: string,
+  picture?: string,
+): object {
+  return {
+    name: name,
+    email: email,
+    picture: picture,
+    role: 'user',
+  }
+}
 
 // upgradeToAdmin will be passed a user object
 // it should alter the role property to be 'admin' and return the object
