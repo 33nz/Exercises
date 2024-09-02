@@ -113,9 +113,13 @@ export function upgradeToAdmin(user: User): User {
 // it should return true if the role is 'admin' and false if it is not
 // Depending on how you code this, you may need a type predicate - https://www.typescriptlang.org/docs/handbook/2/narrowing.html#using-type-predicates
 // or a type assertion - https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#type-assertions
-export function isUserAdmin(): void {}
+export function isUserAdmin(user: User): boolean {
+  return user.role === 'admin'
+}
 
 // getAdmins will be passed an array of user objects
 // it should return an array of only the admin users
 // you should use the above function to help you
-export function getAdmins(): void {}
+export function getAdmins(arr: User[]): User[] {
+  return arr.filter((x) => x.role === 'admin')
+}
