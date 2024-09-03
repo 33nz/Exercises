@@ -4,7 +4,17 @@
 // if the item is a string, return the reversed string
 // if the item is a number, return the negative number
 // if the item is a boolean, return the opposite boolean
-export function getOpposite(): void {}
+export function getOpposite(
+  item: string | number | boolean,
+): string | number | boolean {
+  if (typeof item == 'string') {
+    return item.split('').reverse().join('')
+  } else if (typeof item == 'number') {
+    return item * -1
+  } else {
+    return !item
+  }
+}
 
 // https://www.typescriptlang.org/docs/handbook/2/narrowing.html#the-in-operator-narrowing
 
