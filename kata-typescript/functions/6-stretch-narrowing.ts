@@ -38,7 +38,17 @@ interface Improviser {
 // if the performer is a Musician, call play
 // if the performer is a Dancer, call dance
 // if the performer is an Improviser, call act
-export function nextAct(): void {}
+export function nextAct(
+  performer: Musician | Dancer | Improviser,
+): void | string {
+  if ('play' in performer) {
+    performer.play()
+  } else if ('dance' in performer) {
+    performer.dance()
+  } else if ('act' in performer) {
+    performer.act()
+  }
+}
 
 // https://www.typescriptlang.org/docs/handbook/2/narrowing.html#using-type-predicates
 
