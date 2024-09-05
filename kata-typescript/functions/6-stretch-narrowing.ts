@@ -76,7 +76,9 @@ export type Trash = Recycling | 'rubbish'
 
 // isMetal will be passed an item of Recycling
 // it should return true if the item is Metal
-export function isMetal(): void {}
+export function isMetal(item: Recycling): boolean {
+  return (item as Metal).magnetize !== undefined
+}
 
 // isPaper will be passed an item of Recycling
 // it should return true if the item is Paper
