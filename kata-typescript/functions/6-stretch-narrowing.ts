@@ -82,7 +82,9 @@ export function isMetal(item: Recycling): boolean {
 
 // isPaper will be passed an item of Recycling
 // it should return true if the item is Paper
-export function isPaper(): void {}
+export function isPaper(item: Recycling): boolean {
+  return (item as Paper).density !== undefined
+}
 
 // isGlass will be passed an item of Recycling
 // it should return true if the item is Glass
