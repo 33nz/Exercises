@@ -88,7 +88,9 @@ export function isPaper(item: Recycling): boolean {
 
 // isGlass will be passed an item of Recycling
 // it should return true if the item is Glass
-export function isGlass(): void {}
+export function isGlass(item: Recycling): boolean {
+  return (item as Glass).melt !== undefined
+}
 
 // isRecycling will be passed an item of Trash
 // it should return false if the item is rubbish and true if it is Recycling
