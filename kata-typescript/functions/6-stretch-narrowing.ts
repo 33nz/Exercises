@@ -94,7 +94,13 @@ export function isGlass(item: Recycling): boolean {
 
 // isRecycling will be passed an item of Trash
 // it should return false if the item is rubbish and true if it is Recycling
-export function isRecycling(item: Trash): void {}
+export function isRecycling(item: Trash): boolean {
+  return (
+    (item as Paper).density !== undefined ||
+    (item as Metal).magnetize !== undefined ||
+    (item as Glass).melt !== undefined
+  )
+}
 
 // sortRecycling will be passed an array of Trash items
 // and should return an array of Recycling items only
