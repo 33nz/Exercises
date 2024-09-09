@@ -3,7 +3,12 @@
 // fillArrayWithAnything should take a value of any type and a number
 // and return an array of that value repeated the number of times
 // if the number is less than 1, return an empty array
-export function fillArrayWithAnything(): void {}
+export function fillArrayWithAnything<Type>(
+  value: Type,
+  count: number,
+): Type[] {
+  return count > 0 ? Array(count).fill(value) : []
+}
 
 // getArrayOfZeros should take a number and return an array of that number of zeros
 // it should use the fillArrayWithAnything function to do this
