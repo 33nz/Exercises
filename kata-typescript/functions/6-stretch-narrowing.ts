@@ -104,4 +104,6 @@ export function isRecycling(item: Trash): boolean {
 
 // sortRecycling will be passed an array of Trash items
 // and should return an array of Recycling items only
-export function sortRecycling(): void {}
+export function sortRecycling(arr: Trash[]): Recycling[] {
+  return arr.filter((x) => x !== 'rubbish')
+}
