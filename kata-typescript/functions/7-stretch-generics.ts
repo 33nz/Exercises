@@ -12,7 +12,9 @@ export function fillArrayWithAnything<Type>(
 
 // getArrayOfZeros should take a number and return an array of that number of zeros
 // it should use the fillArrayWithAnything function to do this
-export function getArrayOfZeros(): void {}
+export function getArrayOfZeros(num: number): number[] {
+  return fillArrayWithAnything<number>(0, num)
+}
 
 // getArrayOfBees should take a number and return an array of that number of "bees"
 // it should use the fillArrayWithAnything function to do this
