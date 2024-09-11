@@ -18,7 +18,9 @@ export function getArrayOfZeros(num: number): number[] {
 
 // getArrayOfBees should take a number and return an array of that number of "bees"
 // it should use the fillArrayWithAnything function to do this
-export function getArrayOfBees(): void {}
+export function getArrayOfBees(num: number): string[] {
+  return fillArrayWithAnything<string>('bee', num)
+}
 
 // getFirstItem should take an array of any type and return the first item in the array regardless of type
 // the item should no longer be in the array
