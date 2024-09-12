@@ -25,7 +25,9 @@ export function getArrayOfBees(num: number): string[] {
 // getFirstItem should take an array of any type and return the first item in the array regardless of type
 // the item should no longer be in the array
 // if there is no first item, return undefined
-export function removeFirstItem(): void {}
+export function removeFirstItem<Type>(arr: Type[]): Type | undefined {
+  return arr.length > 0 ? arr.shift() : undefined
+}
 
 // removeEmptySpots should take an array of nulls and another type and remove all null values
 // it should return a new array containing the remaining items
