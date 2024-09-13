@@ -32,7 +32,9 @@ export function removeFirstItem<Type>(arr: Type[]): Type | undefined {
 // removeEmptySpots should take an array of nulls and another type and remove all null values
 // it should return a new array containing the remaining items
 // Hint: you may need a type assertion - https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#type-assertions
-export function removeEmptySpots(): void {}
+export function removeEmptySpots<Type>(arr: (null | Type)[]): Type[] {
+  return arr.filter((x) => x !== null) as Type[]
+}
 
 export function getEmptyArray(): void {}
 
