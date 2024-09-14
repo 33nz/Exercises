@@ -36,7 +36,9 @@ export function removeEmptySpots<Type>(arr: (null | Type)[]): Type[] {
   return arr.filter((x) => x !== null) as Type[]
 }
 
-export function getEmptyArray(): void {}
+export function getEmptyArray<T>(): T[] {
+  return []
+}
 
 /*
   The following code is for testing getEmptyArray.
@@ -46,17 +48,17 @@ export function getEmptyArray(): void {}
   Check TS documentation about calling generic functions for more info.
 */
 
-// function getStringsInArray(): string[] {
-//   const arr = getEmptyArray()
-//   arr.push('hello')
-//   arr.push('world')
-//   return arr
-// }
+function getStringsInArray(): string[] {
+  const arr = getEmptyArray<string>()
+  arr.push('hello')
+  arr.push('world')
+  return arr
+}
 
-// function getNumbersInArray(): number[] {
-//   const arr = getEmptyArray()
-//   arr.push(1)
-//   arr.push(2)
-//   arr.push(3)
-//   return arr
-// }
+function getNumbersInArray(): number[] {
+  const arr = getEmptyArray<number>()
+  arr.push(1)
+  arr.push(2)
+  arr.push(3)
+  return arr
+}
