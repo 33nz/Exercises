@@ -5,18 +5,18 @@ import schedule from './schedule.ts'
 import { Show } from './models/show'
 
 // Complete the getTime function.
-export function getTime(show: Show) {
+export function getTime(show: Show): string {
   return show.time
 }
 
 // Complete the getName function.
-export function getName(show: Show) {
+export function getName(show: Show): string {
   return show.name
 }
 
 // Complete the getShowTimes function, returning an array of show times.
-export function getShowTimes() {
-  return ['Placeholder 1', 'Placeholder 2']
+export function getShowTimes(): string[] {
+  return schedule.map((show) => show.time)
 }
 
 // Complete the getShowNames function, returning an array of show names.
