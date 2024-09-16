@@ -10,7 +10,9 @@ export function getTime(show: Show) {
 }
 
 // Complete the getName function.
-export function getName(show: Show) {}
+export function getName(show: Show) {
+  return show.name
+}
 
 // Complete the getShowTimes function, returning an array of show times.
 export function getShowTimes() {
