@@ -16,7 +16,12 @@ export function getName(show: Show): string {
 
 // Complete the getShowTimes function, returning an array of show times.
 export function getShowTimes(): string[] {
-  return schedule.map((show) => show.time)
+  const arr = []
+  for (let i = 0; i < schedule.length; i++) {
+    const show = schedule[i]
+    arr.push(show.time)
+  }
+  return arr
 }
 
 // Complete the getShowNames function, returning an array of show names.
