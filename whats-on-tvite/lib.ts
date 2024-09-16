@@ -1,9 +1,13 @@
 // Import the schedule file.
+import schedule from './schedule.ts'
 
 // Import the show type from the models file.
+import { Show } from './models/show'
 
 // Complete the getTime function.
-export function getTime(show: Show) {}
+export function getTime(show: Show) {
+  return show.time
+}
 
 // Complete the getName function.
 export function getName(show: Show) {}
