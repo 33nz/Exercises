@@ -16,13 +16,15 @@ export function getName(show: Show): string {
 
 // Complete the getShowTimes function, returning an array of show times.
 export function getShowTimes(): string[] {
-  const arr = []
+  const showTimes = []
+
   for (let i = 0; i < schedule.length; i++) {
     const show = schedule[i]
-    arr.push(show.time)
+    showTimes.push(show.time)
   }
-  return arr
+  return showTimes
 }
+// simpler way is to map i.e. return schedule.map((show) => show.time)
 
 // Complete the getShowNames function, returning an array of show names.
 export function getShowNames() {
