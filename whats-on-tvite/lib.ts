@@ -28,13 +28,7 @@ export function getShowTimes(): string[] {
 
 // Complete the getShowNames function, returning an array of show names.
 export function getShowNames(): string[] {
-  const showNames = []
-
-  for (let i = 0; i < schedule.length; i++) {
-    const show = schedule[i]
-    showNames.push(show.name)
-  }
-  return showNames
+  return schedule.map((show) => show.name)
 }
 
 // Complete the getShowByTimeslot function, returning a show based on the timeslot or undefined if not found.
