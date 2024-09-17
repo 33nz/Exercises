@@ -27,8 +27,8 @@ export function getShowTimes(): string[] {
 // simpler way is to map i.e. return schedule.map((show) => show.time)
 
 // Complete the getShowNames function, returning an array of show names.
-export function getShowNames() {
-  return ['Placeholder name 1', 'Placeholder name 2']
+export function getShowNames(): string[] {
+  return schedule.map((show) => show.name)
 }
 
 // Complete the getShowByTimeslot function, returning a show based on the timeslot or undefined if not found.
