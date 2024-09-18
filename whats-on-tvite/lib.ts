@@ -22,6 +22,7 @@ export function getShowTimes(): string[] {
     const show = schedule[i]
     showTimes.push(show.time)
   }
+
   return showTimes
 }
 // simpler way is to map i.e. return schedule.map((show) => show.time)
@@ -33,12 +34,7 @@ export function getShowNames(): string[] {
 
 // Complete the getShowByTimeslot function, returning a show based on the timeslot or undefined if not found.
 export function getShowByTimeslot(timeslot: string) {
-  const placeholderShow = {
-    time: 'Placeholder time',
-    name: 'Placeholder show',
-    description: 'Placeholder description',
-  }
-  return placeholderShow
+  return schedule.find((show) => show.time == timeslot)
 }
 
 // =========
