@@ -33,7 +33,7 @@ export function getShowNames(): string[] {
 }
 
 // Complete the getShowByTimeslot function, returning a show based on the timeslot or undefined if not found.
-export function getShowByTimeslot(timeslot: string) {
+export function getShowByTimeslot(timeslot: string): Show | undefined {
   return schedule.find((show) => show.time == timeslot)
 }
 
@@ -43,5 +43,7 @@ export function getShowByTimeslot(timeslot: string) {
 
 // Complete the getNextShowByTimeslot function, returning a show based on the timeslot or undefined if not found.
 export function getNextShowByTimeslot(timeslot: string) {
-  return 'Placeholder next show'
+  const index = schedule.findIndex((show) => show.time === timeslot)
+
+  return index === -1 ? undefined : schedule[index + 1].name
 }
