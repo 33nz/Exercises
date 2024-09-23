@@ -2,7 +2,9 @@
 
 // 1. Complete the `hello` function by returning the string 'Hello world!'.
 // hint: do this inside the function body, i.e. inside of the curly brackets.
-function hello() {}
+function hello() {
+  return 'Hello world!'
+}
 
 // 2. + 3. This is a combined question: Define two functions.
 // The first function should be named `sayHi` and return the string 'Hello!'.
