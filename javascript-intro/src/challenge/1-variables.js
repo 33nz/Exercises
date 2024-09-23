@@ -1,6 +1,7 @@
 // ------------ VARIABLES -----------
 
 // 1. Declare a variable named `welcome` and assign it the value 'Hello world'.
+let welcome = 'Hello world'
 
 // 2. The `name` variable and its value are declared below. Reassign the variable so it then has the value of your name.
 let name = 'Old Name' // hint: don't change this line! Reassign on the next line.
