@@ -18,7 +18,10 @@ function sayBye() {
 // 4. Define a function named `greet` that returns the string 'Hey there!'.
 // Then declare a variable named `salutation` and have it call the `greet` function.
 // hint: call a function by writing the function name followed by parentheses, e.g. `hello()`   // expected output: 'Hello world!'
-
+function greet() {
+  return 'Hey there!'
+}
+let salutation = greet()
 // 5. What value does the variable named `welcomeResult` have?
 function welcome() {
   return 'Welcome!'
@@ -26,7 +29,7 @@ function welcome() {
 
 let welcomeResult = welcome()
 // Uncomment the line below and assign your answer to the variable `welcomeResultIs`.
-// const welcomeResultIs =
+const welcomeResultIs = 'Welcome!'
 
 // ---------- FUNCTIONS WITH PARAMETERS ---------
 
