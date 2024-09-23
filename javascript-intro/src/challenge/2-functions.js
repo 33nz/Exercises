@@ -63,7 +63,7 @@ function goodMorning(name) {
 
 let goodMorningResult = goodMorning('Jacky')
 // Uncomment and assign your answer to the variable named `goodMorningResultIs`.
-// const goodMorningResultIs =
+const goodMorningResultIs = 'Good morning Jacky!'
 
 // 10. After the following code has run, what value does `hiResult` have?
 function hi(name) {
@@ -75,12 +75,16 @@ let hi2 = hi('Hamish')
 
 let hiResult = hi1 + ' ' + hi2
 // Uncomment and assign your answer to the variable named `hiResultIs`.
-// const hiResultIs =
+const hiResultIs = 'Hi Andy! Hi Hamish!'
 
 // 11. Define a function named `warn` that takes a parameter
 // it should console.log() the parameter duplicated, with a space between each string
 // then `return` that same value
 // for example: calling warn('alarm') should console.log() the value 'alarm alarm', then return the value 'alarm alarm'.
+function warn(x) {
+  console.log(x + ' ' + x)
+  return x + ' ' + x
+}
 
 // ------------ CHECKS -----------
 // The below lines of code lets us test it to see how you're doing,
