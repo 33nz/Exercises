@@ -36,6 +36,9 @@ const welcomeResultIs = 'Welcome!'
 // 6. Define a function named `shout` which has a parameter and returns the parameter.
 // i.e. the function will return whatever is passed into the parentheses.
 // for example: Calling `shout('Echo')` would return the string 'Echo'.
+function shout(x) {
+  return x
+}
 
 // 7. After the following code has run, what value does `replyResult` have?
 function reply(phrase) {
