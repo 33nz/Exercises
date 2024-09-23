@@ -124,7 +124,9 @@ function isLessThan(num1, num2) {
 // For example: isGreaterOrEqual(12, 24) should return false.
 // Hint: use the greater than or equal to	operator.
 // See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal
-function isGreaterOrEqual(num1, num2) {}
+function isGreaterOrEqual(num1, num2) {
+  return num1 >= num2
+}
 
 // 13. Less than or equal to
 // Complete the function named `isLessOrEqual` that takes two parameters and checks if the first parameter is less than or equal to the second.
@@ -132,7 +134,9 @@ function isGreaterOrEqual(num1, num2) {}
 // For example: isLessOrEqual(123, 24) should return false.
 // Hint: use the less than or equal to operator.
 // See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal
-function isLessOrEqual(num1, num2) {}
+function isLessOrEqual(num1, num2) {
+  return num1 <= num2
+}
 
 // 14. Equal
 // Complete the function named `isSimilar` that takes two parameters and checks the two values for equality.
@@ -140,7 +144,9 @@ function isLessOrEqual(num1, num2) {}
 // For example: isSimilar(10, '14') should return false.
 // Hint: use the equal operator and note the difference between equal and strict equal.
 // See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Equality
-function isSimilar(num, stringNum) {}
+function isSimilar(num, stringNum) {
+  return num == stringNum
+}
 
 // 15. Strict Equal (has equal value and same data type)
 // Complete the function named `isSameTypeAndVal` that takes two parameters and checks the two values for strict equality.
@@ -148,7 +154,9 @@ function isSimilar(num, stringNum) {}
 // For example: isSameTypeAndVal('password', 'passW0rd') should return false.
 // Hint: use the strict equal	operator, please note the difference between this operator and the equal operator.
 // See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality
-function isSameTypeAndVal(stringOrNum1, stringOrNum2) {}
+function isSameTypeAndVal(stringOrNum1, stringOrNum2) {
+  return stringOrNum1 === stringOrNum2
+}
 
 // 16. Not equal
 // Complete the function named `isNotSimilar` that takes two parameters and checks the two values do not equal the same value.
