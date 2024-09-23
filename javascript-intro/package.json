@@ -1,0 +1,20 @@
+{
+  "name": "foundations",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "vite",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "lint": "eslint ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint-config-eda": "^0.1.5",
+    "jest": "^27.3.0",
+    "vitest": "^1.4.0"
+  }
+}
