@@ -52,6 +52,9 @@ const replyResultIs = 'Good morning'
 // 8. Define a function named 'helloFriend` to greet a person by name, using a parameter.
 // For example: Calling helloFriend('Emily') should return the string 'Hello Emily!'.
 // Hint: try using the `+` operator to join strings together.
+function helloFriend(name) {
+  return 'Hello ' + name + '!'
+}
 
 // 9. After the following code has run, what value does `goodMorningResult` have?
 function goodMorning(name) {
