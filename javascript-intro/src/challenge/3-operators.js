@@ -6,7 +6,9 @@
 // For example: add(8, 2) will return 10.
 // Hint: use the addition operator.
 // See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition
-function add(num1, num2) {}
+function add(num1, num2) {
+  return num1 + num2
+}
 
 // 2. Minus
 // Complete the function named `minus` that takes two parameters, minuses the second parameter from the first and returns the result.
@@ -14,7 +16,9 @@ function add(num1, num2) {}
 // For example: minus(8, 2) will return 6.
 // Hint: use the subtraction operator.
 // See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction
-function minus(num1, num2) {}
+function minus(num1, num2) {
+  return num1 - num2
+}
 
 // 3. Multiply
 // Complete the function named `multiply` that takes two parameters, muliplies the two parameters and returns the result.
@@ -22,7 +26,9 @@ function minus(num1, num2) {}
 // For example: multiply(9, 2) will return 18.
 // Hint: use the multiplication operator.
 // See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication
-function multiply(num1, num2) {}
+function multiply(num1, num2) {
+  return num1 * num2
+}
 
 // 4. Divide
 // Complete the function named `divide` that takes two parameters, divides the two parameters and returns the result.
@@ -30,7 +36,9 @@ function multiply(num1, num2) {}
 // For example: divide(15, 3) will return 5.
 // Hint: use the division operator.
 // See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Division
-function divide(num1, num2) {}
+function divide(num1, num2) {
+  return num1 / num2
+}
 
 // 5. Increment
 // Complete the function named `increment` that takes a parameter, increases the value of the parameter and returns the result.
@@ -38,7 +46,9 @@ function divide(num1, num2) {}
 // For example: increment(34) will return 35.
 // Hint: use the increment operator, research the difference between num++ and ++num.
 // See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment
-function increment(num) {}
+function increment(num) {
+  return num + 1
+}
 
 // 6. Decrement
 // Complete the function named `decrement` that takes a parameter, decreases the value of the parameter and returns the result.
@@ -46,7 +56,9 @@ function increment(num) {}
 // For example: decrement(15) will return 14.
 // Hint: use the decrement operator, research the difference between num-- and --num.
 // See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Decrement
-function decrement(num) {}
+function decrement(num) {
+  return num - 1
+}
 
 // ------------ LOGICAL OPERATORS -----------
 
@@ -57,7 +69,9 @@ function decrement(num) {}
 // For example: and(true, false) will return false.
 // Hint: use the AND operator.
 // See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND
-function and(bool1, bool2) {}
+function and(bool1, bool2) {
+  return bool1 && bool2
+}
 
 // 8. OR
 // Complete the function named `or` that takes two booleans as parameters.
@@ -67,7 +81,9 @@ function and(bool1, bool2) {}
 // For example: or(false false) will return false.
 // Hint: use the OR operator.
 // See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR
-function or(bool1, bool2) {}
+function or(bool1, bool2) {
+  return bool1 || bool2
+}
 
 // 9. NOT
 // Complete the function named `not` that takes a boolean as a parameter.
@@ -76,7 +92,9 @@ function or(bool1, bool2) {}
 // For example: not(true) will return false.
 // Hint: use the NOT operator.
 // See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT
-function not(bool) {}
+function not(bool) {
+  return !bool
+}
 
 // ------------ COMPARISON OPERATORS -----------
 
@@ -86,7 +104,9 @@ function not(bool) {}
 // For example: isGreaterThan(12, 24) should return false.
 // Hint: use the greater than operator.
 // See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than
-function isGreaterThan(num1, num2) {}
+function isGreaterThan(num1, num2) {
+  return num1 > num2
+}
 
 // 11. Less than
 // Complete the function named `isLessThan` that takes two parameters and checks if the first parameter is less than the second.
@@ -94,7 +114,9 @@ function isGreaterThan(num1, num2) {}
 // For example: isLessThan(63, 60) should return false.
 // Hint: use the less than operator.
 // See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Less_than
-function isLessThan(num1, num2) {}
+function isLessThan(num1, num2) {
+  return num1 < num2
+}
 
 // 12. Greater than or equal to
 // Complete the function named `isGreaterOrEqual` that takes two parameters and checks if the first parameter is greater than or equal to the second.
