@@ -8,9 +8,13 @@ function hello() {
 
 // 2. + 3. This is a combined question: Define two functions.
 // The first function should be named `sayHi` and return the string 'Hello!'.
-
+function sayHi() {
+  return 'Hello!'
+}
 // The second function should be named `sayBye` and return the string 'Goodbye!'.
-
+function sayBye() {
+  return 'Goodbye!'
+}
 // 4. Define a function named `greet` that returns the string 'Hey there!'.
 // Then declare a variable named `salutation` and have it call the `greet` function.
 // hint: call a function by writing the function name followed by parentheses, e.g. `hello()`   // expected output: 'Hello world!'
