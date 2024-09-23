@@ -5,6 +5,7 @@ let welcome = 'Hello world'
 
 // 2. The `name` variable and its value are declared below. Reassign the variable so it then has the value of your name.
 let name = 'Old Name' // hint: don't change this line! Reassign on the next line.
+name = 'Jacob'
 
 // 3. After the following code has run, what value does `nameOne` have?
 let nameOne = 'Marama'
