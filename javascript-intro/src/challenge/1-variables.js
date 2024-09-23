@@ -14,7 +14,7 @@ let nameThree = nameTwo
 nameTwo = nameOne
 nameOne = nameThree
 // Uncomment the following line and assign your answer to the variable `value`.
-// const value =
+const value = 'Wiremu'
 
 // ------------ CHECKS -----------
 // The below lines of code lets us test it to see how you're doing,
