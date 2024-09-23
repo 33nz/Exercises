@@ -47,7 +47,7 @@ function reply(phrase) {
 
 let replyResult = reply('Good morning')
 // Uncomment the line below and assign your answer to the variable named `replyResultIs`.
-// const replyResultIs =
+const replyResultIs = 'Good morning'
 
 // 8. Define a function named 'helloFriend` to greet a person by name, using a parameter.
 // For example: Calling helloFriend('Emily') should return the string 'Hello Emily!'.
