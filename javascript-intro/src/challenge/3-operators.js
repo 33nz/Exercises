@@ -164,7 +164,9 @@ function isSameTypeAndVal(stringOrNum1, stringOrNum2) {
 // For example: isNotSimilar(1, '2') should return true.
 // Hint: use not equal operator and note the difference between not equal and strict not equal.
 // See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Inequality
-function isNotSimilar(stringOrNum1, stringOrNum2) {}
+function isNotSimilar(stringOrNum1, stringOrNum2) {
+  return stringOrNum1 != stringOrNum2
+}
 
 // 17. Strict not equal
 // Complete the function named `isNotSameTypeOrVal` that takes two parameters and checks the two values do NOT equal the same value or same data type.
@@ -173,7 +175,9 @@ function isNotSimilar(stringOrNum1, stringOrNum2) {}
 // For example: isNotSameTypeOrVal(12, 12) should return false - because they ARE same data type AND the same value.
 // Hint: use the strict not equal operator, please note the difference between this operator and the not equal operator.
 // See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality
-function isNotSameTypeOrVal(one, two) {}
+function isNotSameTypeOrVal(one, two) {
+  return one !== two
+}
 
 // ------------ CHECKS -----------
 // The below lines of code lets us test it to see how you're doing,
