@@ -8,10 +8,12 @@ const shoppingList = ['Kiwifruit', 'Mangosteen', 'Longan']
 // n.b. the code should work even if you were to change the array elements. `treeResult` should always retrieve the first element from `trees`.
 const trees = ['Kahikatea', 'Cherry Blossom', 'Paogo']
 // Write your code below this comment
+const treeResult = trees[0]
 
 // 3. Below is an array named `favouriteBrowsers`. Write some code that will reassign the value of the first element with the string 'Brave'.
 const favouriteBrowsers = ['Chrome', 'Firefox']
 // Write your code below this comment
+favouriteBrowsers[0] = 'Brave'
 
 // 4. Declare a variable named `arrLength` and assign it the value of the length of the `names` array.
 // n.b the code should work even if you were to change the total number of array elements.
