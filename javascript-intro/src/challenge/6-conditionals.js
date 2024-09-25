@@ -16,6 +16,13 @@ function isMatch(num1, num2) {
 // If the two values match, the function should return the string 'Match'.
 // If they are not a match, the function should return the string 'Not a Match'.
 // For example: When isAMatch(21, 21) is called it should return the string 'Match', and isAMatch(7, 11) should return the string 'Not a Match'.
+function isAMatch(a, b) {
+  if (a === b) {
+    return 'Match'
+  } else {
+    return 'Not a Match'
+  }
+}
 
 // 3. if, else if, else statement
 // Write a function named `greetings` that takes a string.
