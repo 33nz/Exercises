@@ -22,6 +22,12 @@ const numberPrintResultCalls = 4
 // For example: logNames(['Sally', 'Nikita', 'Arnav', 'Akira']) would console.log each person's name. 4 names in total.
 // For example: logNames(['Arnav', 'Akira']) would console.log each person's name. 2 names in total.
 
+function logNames(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i])
+  }
+}
+
 // 3. Define a function named 'printCountdown' that takes an array as a parameter.
 // It should loop in reverse through the length of the array and console.log each item with an exclamation mark added to the end.
 // For example: printCountdown(['blast off', 'one', 'two', 'three']) would console.log "three! two! one! blast off!".
