@@ -46,6 +46,24 @@ function greetings(string) {
 // The function should use a `switch statement` to check if the string matches a particular case.
 // If the string matches a case it should return the matching greeting value, otherwise return the default value.
 // Use a switch statement (do not use `if / else` etc.) <go to='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch'>MDN switch statement</go>
+function chooseGreetingLanguage(string) {
+  switch (string) {
+    case 'Te Reo':
+      return 'Kia ora'
+      break
+    case 'English':
+      return 'Hello'
+      break
+    case 'Spanish':
+      return 'Hola'
+    case 'Mandarin':
+      return 'Nǐ hǎo'
+    case 'Samoan':
+      return 'Talofa'
+    default:
+      return '👋'
+  }
+}
 
 // For example:
 // chooseGreetingLanguage('Te Reo') returns 'Kia ora'
