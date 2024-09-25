@@ -80,6 +80,9 @@ function chooseGreetingLanguage(string) {
 // If the user is not registered (false), we want them to see the option to 'Register a new account'.
 // For example: checkUserStatus(true) should return the string 'Log in', checkUserStatus(false) should return the string 'Register a new account'.
 // Use a ternary operator <go to='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator'>MDN ternary operator</go>
+function checkUserStatus(isRegistered) {
+  return isRegistered ? 'Log in' : 'Register a new account'
+}
 
 // ------------ CHECKS -----------
 // The below lines of code lets us test it to see how you're doing,
