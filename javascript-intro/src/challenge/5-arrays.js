@@ -2,6 +2,7 @@
 
 // 1. Define an array named `shoppingList`. This array should contain:
 // Three strings that are the following fruit names: 'Kiwifruit', 'Mangosteen', 'Longan'.
+const shoppingList = ['Kiwifruit', 'Mangosteen', 'Longan']
 
 // 2. Declare a variable named `treeResult` and assign it the value of the first element from the `trees` array.
 // n.b. the code should work even if you were to change the array elements. `treeResult` should always retrieve the first element from `trees`.

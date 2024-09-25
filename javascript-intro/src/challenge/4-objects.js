@@ -27,6 +27,7 @@ const person = {
   eyeColor: 'brown',
 }
 // Write your code below this comment
+person.name = 'Jacob'
 
 // ------------ CHECKS -----------
 // The below lines of code lets us test it to see how you're doing,
