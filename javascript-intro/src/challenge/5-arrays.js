@@ -19,6 +19,7 @@ favouriteBrowsers[0] = 'Brave'
 // n.b the code should work even if you were to change the total number of array elements.
 const names = ['Yuko', 'Amanda', 'Kahu']
 // Write your code below this comment
+const arrLength = names.length
 
 // ------------ CHECKS -----------
 // The below lines of code lets us test it to see how you're doing,

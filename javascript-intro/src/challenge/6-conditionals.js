@@ -5,6 +5,11 @@
 // Hint: Look up the term "js strict equality" if you are not sure.
 // If the two values match, the function should return the string 'Match'.
 // For example: When isMatch(7, 7) is called it should return the string 'Match'.
+function isMatch(num1, num2) {
+  if (num1 === num2) {
+    return 'Match'
+  }
+}
 
 // 2. if, else statement
 // Write a function named `isAMatch` that uses an `if else statement` to check two values for strict equality.
