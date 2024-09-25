@@ -31,6 +31,15 @@ function isAMatch(a, b) {
 // Otherwise return a '👋'
 // Hint: use an `if, else if, else statement`. Look up "js if, else if, else statement" if you are not sure.
 // For example: greetings('Te Reo') should return 'Kia ora' and greetings('Dutch') should return '👋'.
+function greetings(string) {
+  if (string === 'Te Reo') {
+    return 'Kia ora'
+  } else if (string === 'English') {
+    return 'Hello'
+  } else {
+    return '👋'
+  }
+}
 
 // 4. switch statement
 // Write a function named `chooseGreetingLanguage` that takes a string.
