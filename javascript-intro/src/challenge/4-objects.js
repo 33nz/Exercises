@@ -4,6 +4,11 @@
 // The key `name` and the value 'Leon Kim'.
 // The key `address` and the value '123 Main St'.
 // The key `phone` and the value '021 555 555'.
+const contact = {
+  name: 'Leon Kim',
+  address: '123 Main St',
+  phone: '021 555 555',
+}
 
 // 2. Declare a variable named 'customer' and assign it the value of the `name` key from the `receipt` object.
 // n.b. make sure you access the object's property, do not type the string 'Marta'.
@@ -13,6 +18,7 @@ const receipt = {
   name: 'Marta',
 }
 // Write your code below this comment
+const customer = receipt.name
 
 // 3. Use dot notation to access the `name` property in the `person` object and reassign the value to be your own name.
 const person = {
