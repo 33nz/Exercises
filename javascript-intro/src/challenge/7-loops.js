@@ -15,7 +15,7 @@ function printFruit(fruits) {
 // How many times would the function 'printResult' be called?
 // Uncomment the following line and assign your answer to the variable `numberPrintResultCalls`.
 
-// const numberPrintResultCalls =
+const numberPrintResultCalls = 4
 
 // 2. Define a function named `logNames` that takes an array as a parameter.
 // It should loop for the array's length and console.log each name in the array.
