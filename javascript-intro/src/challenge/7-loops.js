@@ -46,6 +46,15 @@ function printCountdown(arr) {
 // For example: countShortNames(['Sally', 'John', 'James', 'Alice', 'Sue']) would return a count of 2 for 'John' and 'Sue', as their names are less than 5 characters in length.
 // Instead of a for loop, try using a `for of` loop.
 // Hint #1: for reference see: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of
+function countShortNames(arr) {
+  let newArr = []
+  for (let string of arr) {
+    if (string.length < 5) {
+      newArr.push(string)
+    }
+  }
+  return newArr.length
+}
 
 // 5. Define a function named `everySecondItem` that takes an array of items and returns a new array that only includes every second item.
 // Instead of a for loop, try this using the `forEach` array method https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
