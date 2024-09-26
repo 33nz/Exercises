@@ -33,6 +33,11 @@ function logNames(arr) {
 // For example: printCountdown(['blast off', 'one', 'two', 'three']) would console.log "three! two! one! blast off!".
 // Hint #1: Remember that array indexes begin at 0. How would you use array.length to begin your for loop to access the last element in the array?
 // Hint #2: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Decrement
+function printCountdown(arr) {
+  for (let i = arr.length - 1; i >= 0; i--) {
+    console.log(arr[i] + '!')
+  }
+}
 
 // ------------ STRETCH CHALLENGES -----------
 // The next two challenges can be a bit tricky, remember to ask for help if you need it.
