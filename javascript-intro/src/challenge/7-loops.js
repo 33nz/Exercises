@@ -61,6 +61,16 @@ function countShortNames(arr) {
 // For example: everySecondItem([1, 'test', 'something', 23, 42, {greeting: 'hi'}]) would return ['test', 23, {greeting: 'hi'}].
 // Hint #1: The remainder (%) operator might also be useful https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder
 // Hint #2: Array.push() can help add things to a results array https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push
+function everySecondItem(arr) {
+  let newArr = []
+
+  arr.forEach((string, i) => {
+    if (i % 2 == 1) {
+      newArr.push(string)
+    }
+  })
+  return newArr
+}
 
 // ------------ CHECKS -----------
 // The below lines of code lets us test it to see how you're doing,
