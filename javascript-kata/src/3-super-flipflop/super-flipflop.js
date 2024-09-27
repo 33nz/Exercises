@@ -17,7 +17,9 @@ import { flipflop } from './flipflop.js'
 
 // write your code below this line---------------------------------
 
-function superFlipFlop(arrayParameter) {}
+function superFlipFlop(arr) {
+  return arr.map((x) => flipflop(x))
+}
 
 // write your code above this line----------------------------------
 // -----------------------------------------------------------------
