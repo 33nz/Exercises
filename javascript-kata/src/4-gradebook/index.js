@@ -22,15 +22,14 @@ for (let i = 0; i < students.length; i++) {
   gradebook[students[i]] = {}
 }
 
-console.log(gradebook)
-
 // 3. Add a new property with a key of testScores to each student property in gradebook.
 // The value of this property should be equal to the student’s scores in the scores array.
-gradebook = {
-  Joseph: { testScores: [80, 70, 70, 100] },
-  Susan: { testScores: [85, 80, 90, 90] },
-  Wiremu: { testScores: [75, 70, 80, 75] },
-  Elizabeth: { testScores: [100, 90, 95, 85] },
+for (let students in gradebook) {
+  gradebook[students].testScores = []
+}
+
+for (let i = 0; i < students.length; i++) {
+  gradebook[students[i]].testScores = scores[i]
 }
 
 // 4. Complete the addScore function that has two parameters: studentName, and score.
