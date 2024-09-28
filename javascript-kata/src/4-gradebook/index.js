@@ -32,11 +32,17 @@ for (let i = 0; i < students.length; i++) {
   gradebook[students[i]].testScores = scores[i]
 }
 
+console.log(gradebook)
+
 // 4. Complete the addScore function that has two parameters: studentName, and score.
 // addScore should add the score which is passed to it to the given student’s testScores array.
 // For example:
 // addScore("Susan", 80)  would push the score 80 into the value of gradebook.Susan.testScores
-function addScore(studentName, score) {}
+function addScore(studentName, score) {
+  if (studentName in gradebook) {
+    gradebook[studentName].testScores.push(score)
+  }
+}
 
 // 5. Complete the average function that returns the average of a given array of numbers.
 function average(arr) {}
