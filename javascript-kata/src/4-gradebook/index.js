@@ -14,7 +14,7 @@ const scores = [
 // write your code below this line---------------------------------
 
 // 1. Assign the gradebook variable with the value of an empty object.
-let gradebook
+let gradebook = {}
 
 // 2. Add each student (from the students array) as a property to the gradebook object.
 // The key should equal the student’s name and the value should equal a new empty object.
