@@ -45,7 +45,15 @@ function addScore(studentName, score) {
 }
 
 // 5. Complete the average function that returns the average of a given array of numbers.
-function average(arr) {}
+function average(arr) {
+  let sum = 0
+
+  for (let num of arr) {
+    sum += num
+  }
+  let avg = sum / arr.length
+  return avg
+}
 
 // 6. Complete the getAverage function that takes a name parameter and returns the average of that student’s testScores.
 // You can call the average function within this function.
