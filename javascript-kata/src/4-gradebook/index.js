@@ -71,7 +71,19 @@ function getAverage(studentName) {
 // - gradebook (an empty object)
 // - students & scores (arrays similar to the ones from the top of this file)
 // use those parameters to construct a new gradebook from scratch
-function enterScores(gradebook, students, scores) {}
+let _gradebook = {}
+
+function enterScores(_gradebook, students, scores) {
+  // Loop through each student in the students array
+  for (let i = 0; i < students.length; i++) {
+    // Add student name as a key in gradebook, with an empty object as the value
+    _gradebook[students[i]] = {}
+
+    // Add the testScores property to the student's object and set it to the corresponding scores
+    _gradebook[students[i]].testScores = scores[i]
+  }
+  return _gradebook
+}
 
 // write your code above this line----------------------------------
 // -----------------------------------------------------------------
