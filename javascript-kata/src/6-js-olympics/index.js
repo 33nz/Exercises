@@ -58,7 +58,9 @@ function unjumble(string) {
 // 3.1 Create a function called removeOdds that accepts an array of numbers. Return an array with only the even numbers.
 // You can do this manually or use built-in JavaScript Array Methods.
 
-function removeOdds(arr) {}
+function removeOdds(arr) {
+  return arr.filter((num) => num % 2 === 0)
+}
 
 //////////////////////////////////
 // Event 4 - We built this city //
@@ -66,7 +68,18 @@ function removeOdds(arr) {}
 
 // 4.1 Create a function called newAthlete that takes a name, age, sport, and quote and creates a new athlete object from it. Don't forget to include a win attribute.
 
-function newAthlete(name, age, sport, quote) {}
+function newAthlete(name, age, sport, quote) {
+  let athlete = {
+    name: name,
+    age: age,
+    sport: sport,
+    quote: quote,
+    win: function () {
+      console.log(`${this.name} won the ${this.sport} event!`)
+    },
+  }
+  return athlete
+}
 
 // write your code above this line----------------------------------
 // -----------------------------------------------------------------
