@@ -47,7 +47,9 @@ for (let i = 0; i < athleteArray.length; i++) {
 // Use the built-in JavaScript methods for strings and arrays to accomplish this.
 // See the MDN String and Array documentation for all the available methods.
 
-function unjumble(s) {}
+function unjumble(string) {
+  return string.split('').reverse().join('')
+}
 
 /////////////////////////
 // Event 3 -  Odds Out //
