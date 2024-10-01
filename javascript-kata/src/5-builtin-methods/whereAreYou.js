@@ -2,7 +2,9 @@
 // Use the .find() method and return the first object that “Scooby” is hiding within.
 // Look at the whereAreYou tests in the index.test.js file or use console.log inside of the function to determine the structure of objects in the array.
 
-function whereAreYou(arrayOfObjects) {}
+function whereAreYou(arrayOfObjects) {
+  return arrayOfObjects.find((x) => x.hiding === 'Scooby')
+}
 
 // write your code above this line----------------------------------
 // -----------------------------------------------------------------
