@@ -73,7 +73,7 @@ describe('getAverage', () => {
   })
 })
 
-describe.skip('enterScores', () => {
+describe('enterScores', () => {
   it('should be a function', () => {
     expect(typeof enterScores).toBe('function')
   })
