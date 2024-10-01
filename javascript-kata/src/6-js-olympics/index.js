@@ -14,15 +14,30 @@ let santa = {
 ///////////////////////
 
 // 0.1 Add santa to the athlete array
+athleteArray.push(santa)
 
 // 0.2 Create your own athlete and add it to the athlete array
+let jacob = {
+  name: 'Jacob',
+  age: '33',
+  sport: 'Code',
+  quote:
+    'i am the prince of peace sitting on the throne of poise, directing the kingdom of activity',
+}
 
+athleteArray.push(jacob)
 ///////////////////////
 // Event 1 - Bulk Up //
 ///////////////////////
 
 // 1.1 Use a for loop to add a property called win to every element in athleteArray.
 // win should be a function expression with no parameters that console logs: "{name} won the {sport} event!"
+
+for (let i = 0; i < athleteArray.length; i++) {
+  athleteArray[i].win = function () {
+    console.log(`${this.name} won the ${this.sport} event!`)
+  }
+}
 
 ///////////////////////////
 // 2 - Jumble your words //

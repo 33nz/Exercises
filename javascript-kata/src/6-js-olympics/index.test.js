@@ -3,7 +3,7 @@ import { describe, it, expect, vi } from 'vitest'
 import { athleteArray, unjumble, removeOdds, newAthlete } from './index.js'
 
 let log = vi.spyOn(console, 'log').mockImplementation(() => {})
-describe.skip('The JS Olympics (stretch)', () => {
+describe('The JS Olympics (stretch)', () => {
   describe('The Warmup', () => {
     it('athleteArray should contain several athletes', () => {
       expect(athleteArray.length).toBeGreaterThan(1)
