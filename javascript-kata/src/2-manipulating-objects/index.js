@@ -9,13 +9,16 @@ let terah = {
 // write your code below this line---------------------------------
 
 // 1. Use object literal notation to assign adam the value of an object with no properties.
-let adam
+let adam = {}
 
 // 2. Give the adam object a name key that has the value "Adam".
+adam.name = 'Adam'
 
 // 3. Add a spouse key to the adam object and assign it the value of terah.
+adam.spouse = terah
 
 // 4. Add a "spouse" key to terah and assign it the value of adam.
+terah.spouse = adam
 
 // 5. Change the value of the terah "age" property to 33.
 
