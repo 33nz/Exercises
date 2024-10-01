@@ -21,12 +21,16 @@ adam.spouse = terah
 terah.spouse = adam
 
 // 5. Change the value of the terah "age" property to 33.
+terah.age = 33
 
 // 6. Remove the eyeColor property from terah (hint: use the delete operator).
+delete terah.eyeColor
 
 // 7. Add a children key to terah and use object literal notation to assign this variable to an empty object.
+terah.children = {}
 
 // 8. Add a ben property to the value of the terah children property. ben should be an object with the key name and the value "Ben".
+terah.children.ben = { name: 'Ben' }
 
 // 9. Add a wilson property to the value of the terah children property. wilson should be an object with the key name with the value "Wilson".
 
