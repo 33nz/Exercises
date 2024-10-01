@@ -33,6 +33,7 @@ terah.children = {}
 terah.children.ben = { name: 'Ben' }
 
 // 9. Add a wilson property to the value of the terah children property. wilson should be an object with the key name with the value "Wilson".
+terah.children.wilson = { name: 'Wilson' }
 
 // 10. Add a felicia property to the value of the terah children property. felicia should be an object with the key name with the value "Felicia".
 
