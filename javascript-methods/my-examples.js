@@ -39,3 +39,14 @@ let heros = [
 
 const theMostSuperHero = heros.find((hero) => hero.name === 'Jebus')
 console.log(theMostSuperHero)
+
+// Here is an array of Object static methods
+
+const values = Object.values(heros)
+console.log(values)
+
+const entries = Object.entries(heros)
+console.log(entries)
+
+console.log(Object.keys(heros))
+console.log(Object.keys(heros[1]))
