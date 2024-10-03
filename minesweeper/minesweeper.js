@@ -7,54 +7,64 @@ const board = {
       row: 0,
       col: 0,
       isMine: false,
+      isMarked: false,
       hidden: true,
     },
     {
       row: 0,
       col: 1,
       isMine: true,
+      isMarked: false,
       hidden: true,
     },
     {
       row: 0,
       col: 2,
       isMine: false,
+      isMarked: false,
       hidden: true,
     },
     {
       row: 1,
       col: 0,
       isMine: false,
+      isMarked: false,
       hidden: true,
     },
     {
       row: 1,
       col: 1,
       isMine: false,
+      isMarked: false,
       hidden: true,
     },
     {
       row: 1,
       col: 2,
       isMine: true,
+      isMarked: false,
       hidden: true,
     },
     {
       row: 2,
       col: 0,
       isMine: false,
+      isMarked: false,
       hidden: true,
     },
     {
       row: 2,
       col: 1,
       isMine: true,
+      isMarked: false,
       hidden: true,
+      isMarked: false,
     },
     {
       row: 2,
       col: 2,
       isMine: false,
+      isMarked: false,
       hidden: true,
     },
   ],
@@ -69,6 +79,7 @@ function startGame() {
   lib.initBoard()
 
   document.addEventListener('click', checkForWin)
+  document.addEventListener('contextmenu', checkForWin)
 }
 
 // Define this function to look for a win condition:
@@ -79,6 +90,18 @@ function checkForWin() {
   // You can use this function call to declare a winner (once you've
   // detected that they've won, that is!)
   //   lib.displayMessage('You win!')
+  for (let i = 0; i < board.cells.length; i++) {
+    const cell = board.cells[i]
+
+    if (cell.isMine && !cell.isMarked) {
+      return
+    }
+
+    if (!cell.isMine && cell.hidden) {
+      return
+    }
+  }
+  lib.displayMessage('You win!')
 }
 
 // Define this function to count the number of mines around the cell
