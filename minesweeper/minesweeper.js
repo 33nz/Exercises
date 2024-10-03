@@ -6,7 +6,7 @@ const board = {
     {
       row: 0,
       col: 0,
-      isMine: true,
+      isMine: false,
       hidden: true,
     },
     {
@@ -18,19 +18,19 @@ const board = {
     {
       row: 0,
       col: 2,
-      isMine: true,
+      isMine: false,
       hidden: true,
     },
     {
       row: 1,
       col: 0,
-      isMine: true,
+      isMine: false,
       hidden: true,
     },
     {
       row: 1,
       col: 1,
-      isMine: true,
+      isMine: false,
       hidden: true,
     },
     {
@@ -42,7 +42,7 @@ const board = {
     {
       row: 2,
       col: 0,
-      isMine: true,
+      isMine: false,
       hidden: true,
     },
     {
@@ -54,7 +54,7 @@ const board = {
     {
       row: 2,
       col: 2,
-      isMine: true,
+      isMine: false,
       hidden: true,
     },
   ],
@@ -67,6 +67,8 @@ function startGame() {
   }
 
   lib.initBoard()
+
+  document.addEventListener('click', checkForWin)
 }
 
 // Define this function to look for a win condition:
@@ -96,5 +98,6 @@ function countSurroundingMines(cell) {
       count++
     }
   }
-  console.log(count)
+
+  return count
 }
