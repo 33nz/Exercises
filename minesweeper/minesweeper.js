@@ -1,74 +1,95 @@
 document.addEventListener('DOMContentLoaded', startGame)
 
 // Define your `board` object here!
-const board = {
-  cells: [
-    {
-      row: 0,
-      col: 0,
-      isMine: false,
-      isMarked: false,
-      hidden: true,
-    },
-    {
-      row: 0,
-      col: 1,
-      isMine: true,
-      isMarked: false,
-      hidden: true,
-    },
-    {
-      row: 0,
-      col: 2,
-      isMine: false,
-      isMarked: false,
-      hidden: true,
-    },
-    {
-      row: 1,
-      col: 0,
-      isMine: false,
-      isMarked: false,
-      hidden: true,
-    },
-    {
-      row: 1,
-      col: 1,
-      isMine: false,
-      isMarked: false,
-      hidden: true,
-    },
-    {
-      row: 1,
-      col: 2,
-      isMine: true,
-      isMarked: false,
-      hidden: true,
-    },
-    {
-      row: 2,
-      col: 0,
-      isMine: false,
-      isMarked: false,
-      hidden: true,
-    },
-    {
-      row: 2,
-      col: 1,
-      isMine: true,
-      isMarked: false,
-      hidden: true,
-      isMarked: false,
-    },
-    {
-      row: 2,
-      col: 2,
-      isMine: false,
-      isMarked: false,
-      hidden: true,
-    },
-  ],
+// const board = {
+//   cells: [
+//     {
+//       row: 0,
+//       col: 0,
+//       isMine: false,
+//       isMarked: false,
+//       hidden: true,
+//     },
+//     {
+//       row: 0,
+//       col: 1,
+//       isMine: true,
+//       isMarked: false,
+//       hidden: true,
+//     },
+//     {
+//       row: 0,
+//       col: 2,
+//       isMine: false,
+//       isMarked: false,
+//       hidden: true,
+//     },
+//     {
+//       row: 1,
+//       col: 0,
+//       isMine: false,
+//       isMarked: false,
+//       hidden: true,
+//     },
+//     {
+//       row: 1,
+//       col: 1,
+//       isMine: false,
+//       isMarked: false,
+//       hidden: true,
+//     },
+//     {
+//       row: 1,
+//       col: 2,
+//       isMine: true,
+//       isMarked: false,
+//       hidden: true,
+//     },
+//     {
+//       row: 2,
+//       col: 0,
+//       isMine: false,
+//       isMarked: false,
+//       hidden: true,
+//     },
+//     {
+//       row: 2,
+//       col: 1,
+//       isMine: true,
+//       isMarked: false,
+//       hidden: true,
+//       isMarked: false,
+//     },
+//     {
+//       row: 2,
+//       col: 2,
+//       isMine: false,
+//       isMarked: false,
+//       hidden: true,
+//     },
+//   ],
+// }
+
+function generateBoard(numRows, numCols) {
+  const board = {
+    cells: [],
+  }
+
+  for (let row = 0; row < numRows; row++) {
+    for (let col = 0; col < numCols; col++) {
+      board.cells.push({
+        row: row,
+        col: col,
+        isMine: true,
+        isMarked: false,
+        hidden: true,
+      })
+    }
+  }
+  return board
 }
+
+const board = generateBoard(3, 3)
 
 function startGame() {
   // Don't remove this function call: it makes the game work!
