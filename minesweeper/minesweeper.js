@@ -103,9 +103,9 @@ function placeMines(board, numMines) {
   }
 }
 
-const board = generateBoard(3, 3)
+const board = generateBoard(6, 6)
 
-placeMines(board, 2)
+placeMines(board, 6)
 
 function startGame() {
   // Don't remove this function call: it makes the game work!
