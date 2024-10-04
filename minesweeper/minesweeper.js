@@ -80,7 +80,7 @@ function generateBoard(numRows, numCols) {
       board.cells.push({
         row: row,
         col: col,
-        isMine: true,
+        isMine: false,
         isMarked: false,
         hidden: true,
       })
@@ -89,7 +89,23 @@ function generateBoard(numRows, numCols) {
   return board
 }
 
+function placeMines(board, numMines) {
+  let minesPlaced = 0
+
+  while (minesPlaced < numMines) {
+    const randomIndex = Math.floor(Math.random() * board.cells.length)
+    const cell = board.cells[randomIndex]
+
+    if (!cell.isMine) {
+      cell.isMine = true
+      minesPlaced++
+    }
+  }
+}
+
 const board = generateBoard(3, 3)
+
+placeMines(board, 2)
 
 function startGame() {
   // Don't remove this function call: it makes the game work!
