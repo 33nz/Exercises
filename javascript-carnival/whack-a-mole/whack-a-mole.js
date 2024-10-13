@@ -2,29 +2,19 @@
 // JAVASCRIPT CARNIVAL //
 // -    -   -   -   -  //
 
+import { getRandomNumber } from './random-number.js'
+
 console.log('Whack-a-Mole!')
 
-let cells = document.getElementsByClassName('cell')
+let cellsArray = document.getElementsByClassName('cell')
 
-console.log(cells)
-console.log('cell count:' + cells.length)
+let randomIndex = getRandomNumber(0, cellsArray.length)
+let randomCell = cellsArray[randomIndex]
 
-console.log(randomIndex)
+const img = document.createElement('img')
+img.src = './mole.png'
+img.alt = 'Mole'
+img.width = 75
+img.heigh = 75
 
-function popMole() {
-  for (let cell of cells) {
-    if (cell.querySelector('img')) {
-      cell.removeChild(cell.querySelector('img'))
-    }
-  }
-
-  const img = document.createElement('img')
-  img.src = './whack-a-mole/mole.png'
-  img.alt = 'Mole'
-
-  let randomIndex = Math.floor(Math.random() * cells.length)
-
-  let cell = cells[randomIndex]
-
-  cell.appendChild(img)
-}
+randomCell.appendChild(img)
