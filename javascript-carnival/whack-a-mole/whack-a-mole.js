@@ -18,3 +18,15 @@ img.width = 75
 img.heigh = 75
 
 randomCell.appendChild(img)
+
+function whackedMole() {
+  this.parentNode.removeChild(this)
+
+  let newIndex = getRandomNumber(0, cellsArray.length)
+
+  let newCell = cellsAray[newIndex]
+
+  newCell.appendChild(img)
+}
+
+img.onclick = whackedMole
