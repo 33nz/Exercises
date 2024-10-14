@@ -24,7 +24,7 @@ function whackedMole() {
 
   let newIndex = getRandomNumber(0, cellsArray.length)
 
-  let newCell = cellsAray[newIndex]
+  let newCell = cellsArray[newIndex]
 
   newCell.appendChild(img)
 }
