@@ -27,6 +27,11 @@ function whackedMole() {
   let newCell = cellsArray[newIndex]
 
   newCell.appendChild(img)
+
+  const whackAudio = document.createElement('audio')
+  whackAudio.src = './whack-audio.wav'
+
+  whackAudio.play()
 }
 
 img.onclick = whackedMole
