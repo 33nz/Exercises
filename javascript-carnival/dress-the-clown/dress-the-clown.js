@@ -12,4 +12,13 @@ function changeClownHead() {
   head.src = headSrc
 }
 
-changeClownHead()
+document.onkeydown = checkKey
+
+function checkKey(e) {
+  e = e || window.event
+
+  if (e.keyCode == '39') {
+    headIndex++
+    changeClownHead()
+  }
+}
