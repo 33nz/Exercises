@@ -44,14 +44,25 @@ function checkKey(e) {
     if (bodyPartIndex > bodyParts.length - 1) {
       bodyPartIndex = 0
     }
-  }
-
-  if (e.keyCode == '39') {
-    headIndex++
-    if (headIndex > 5) {
-      headIndex = 0
+  } else if (e.keyCode == '39') {
+    if (bodyPartIndex === 0) {
+      headIndex++
+      if (headIndex > 5) {
+        headIndex = 0
+      }
     }
-    changeClownHead()
+    if (bodyPartIndex === 1) {
+      bodyIndex++
+      if (bodyIndex > 5) {
+        bodyIndex = 0
+      }
+    }
+    if (bodyPartIndex === 2) {
+      shoeIndex++
+      if (shoeIndex > 5) {
+        shoeIndex = 0
+      }
+    }
   } else if (e.keyCode == '37') {
     headIndex--
     if (headIndex < 0) {
