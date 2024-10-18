@@ -63,11 +63,26 @@ function checkKey(e) {
         shoeIndex = 0
       }
     }
+    bodyParts[bodyPartIndex]()
   } else if (e.keyCode == '37') {
-    headIndex--
-    if (headIndex < 0) {
-      headIndex = 5
+    if (bodyPartIndex === 0) {
+      headIndex--
+      if (headIndex < 0) {
+        headIndex = 5
+      }
     }
-    changeClownHead()
+    if (bodyPartIndex === 1) {
+      bodyIndex--
+      if (bodyIndex < 0) {
+        bodyIndex = 5
+      }
+    }
+    if (bodyPartIndex === 2) {
+      shoeIndex--
+      if (shoeIndex < 0) {
+        shoeIndex = 5
+      }
+    }
+    bodyParts[bodyPartIndex]()
   }
 }
