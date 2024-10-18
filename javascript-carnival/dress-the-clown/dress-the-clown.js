@@ -6,7 +6,7 @@ console.log('Dress The Clown!')
 
 let headIndex = 0
 let bodyIndex = 0
-let shoeIndex = 0
+let shoeIndex = 5
 
 function changeClownHead() {
   const head = document.getElementById('head')
@@ -18,6 +18,12 @@ function changeBody() {
   const body = document.getElementById('body')
   let bodySrc = './images/body' + bodyIndex + '.png'
   body.src = bodySrc
+}
+
+function changeShoes() {
+  const shoes = document.getElementById('shoes')
+  let shoesSrc = './images/shoes' + shoeIndex + '.png'
+  shoes.src = shoesSrc
 }
 
 document.onkeydown = checkKey
@@ -39,3 +45,7 @@ function checkKey(e) {
     changeClownHead()
   }
 }
+
+changeBody()
+
+changeShoes()
