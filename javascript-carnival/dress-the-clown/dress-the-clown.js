@@ -6,7 +6,7 @@ console.log('Dress The Clown!')
 
 let headIndex = 0
 let bodyIndex = 0
-let shoeIndex = 5
+let shoeIndex = 0
 
 function changeClownHead() {
   const head = document.getElementById('head')
