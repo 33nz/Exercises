@@ -26,10 +26,25 @@ function changeShoes() {
   shoes.src = shoesSrc
 }
 
+const bodyParts = [changeClownHead, changeBody, changeShoes]
+let bodyPartIndex = 0
+
 document.onkeydown = checkKey
 
 function checkKey(e) {
   e = e || window.event
+
+  if (e.keyCode == '38') {
+    bodyPartIndex--
+    if (bodyPartIndex < 0) {
+      bodyPartIndex = bodyParts.length - 1
+    }
+  } else if (e.keyCode == '40') {
+    bodyPartIndex++
+    if (bodyPartIndex > bodyParts.length - 1) {
+      bodyPartIndex = 0
+    }
+  }
 
   if (e.keyCode == '39') {
     headIndex++
@@ -45,7 +60,3 @@ function checkKey(e) {
     changeClownHead()
   }
 }
-
-changeBody()
-
-changeShoes()
