@@ -8,20 +8,21 @@ let headIndex = 0
 let bodyIndex = 0
 let shoeIndex = 0
 
+const head = document.getElementById('head')
+const body = document.getElementById('body')
+const shoes = document.getElementById('shoes')
+
 function changeClownHead() {
-  const head = document.getElementById('head')
   let headSrc = './images/head' + headIndex + '.png'
   head.src = headSrc
 }
 
 function changeBody() {
-  const body = document.getElementById('body')
   let bodySrc = './images/body' + bodyIndex + '.png'
   body.src = bodySrc
 }
 
 function changeShoes() {
-  const shoes = document.getElementById('shoes')
   let shoesSrc = './images/shoes' + shoeIndex + '.png'
   shoes.src = shoesSrc
 }
@@ -85,4 +86,10 @@ function checkKey(e) {
     }
     bodyParts[bodyPartIndex]()
   }
+}
+
+let clown = {
+  head: head,
+  body: body,
+  shoes: shoes,
 }
