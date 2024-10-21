@@ -90,8 +90,17 @@ function checkKey(e) {
   }
 }
 
+// define clown as an object
 let clown = {
   head: head,
   body: body,
   shoes: shoes,
+}
+// define save button variable
+let saveMeButton = document.querySelector('button')
+// add click event listener to saveClown function
+saveMeButton.addEventListener('click', saveClown)
+// define the saveClown function
+function saveClown() {
+  save(clown)
 }
