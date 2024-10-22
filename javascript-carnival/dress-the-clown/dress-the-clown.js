@@ -33,10 +33,17 @@ function checkKey(e) {
     partIndex++
     if (partIndex > 2) partIndex = 0
   }
-  // decrease index of current part
+  // decrease index of current part with left arrow
   else if (e.keyCode == '37') {
     indexes[partIndex]--
     if (indexes[partIndex] < 0) indexes[partIndex] = 5
+    elements[partIndex].src =
+      './images/' + getPartName(partIndex) + indexes[partIndex] + '.png'
+  }
+  // increase index of current part with right arrow
+  else if (e.keyCode == '39') {
+    indexes[pardIndex]++
+    if (indexes[partIndex] > 5) indexes[partIndex] = 0
     elements[partIndex].src =
       './images/' + getPartName(partIndex) + indexes[partIndex] + '.png'
   }
