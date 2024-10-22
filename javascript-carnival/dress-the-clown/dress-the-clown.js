@@ -11,3 +11,11 @@ let elements = [
   document.getElementById('body'),
   document.getElementById('shoes'),
 ]
+
+// array to keep track of current part images
+let indexes = [0, 0, 0]
+
+// set variavle for each part
+let head = document.getElementById('head')
+let body = document.getElementById('body')
+let shoes = document.getElementById('shoes')
