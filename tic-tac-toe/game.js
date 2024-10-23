@@ -8,4 +8,6 @@ function sayHello() {
   console.log('Hello')
 }
 
-cells[0].onclick = sayHello
+for (let i = 0; i < cells.length; i++) {
+  cells[i].onclick = sayHello
+}
