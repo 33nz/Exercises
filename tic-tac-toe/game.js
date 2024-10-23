@@ -10,7 +10,8 @@ for (let i = 0; i < cells.length; i++) {
 
 function cellClicked(e) {
   let cell = e.target
-  console.log('I clicked on: ' + cell)
+  let index = Array.prototype.indexOf.call(cells, cell)
+  console.log('I clicked on cell ' + (index + 1))
 }
 
 let noughtsTurn = true
