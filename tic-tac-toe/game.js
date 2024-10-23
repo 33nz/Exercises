@@ -5,12 +5,21 @@ let cells = document.getElementsByTagName('td')
 console.log(cells)
 
 function sayHello() {
-  console.log('Hello')
+  console.log('Hey man')
 }
 
-for (let i = 0; i < cells.length; i++) {
-  cells[i].onclick = sayHello
+function cellClicked(e) {
+  let cell = e.target
+  console.log('I clicked on: ' + cell)
 }
+
+for (let cell of cells) {
+  cell.onclick = sayHello
+}
+
+// for (let i = 0; i < cells.length; i++) {
+//   cells[i].onclick = sayHello
+// }
 
 let noughtsTurn = true
 
