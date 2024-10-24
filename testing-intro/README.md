@@ -1,4 +1,5 @@
-# Kata: Data Structures
+# Kata: Testing Intro
+## Formerly kata-data-structures
 
 This challenge is designed to practice interacting with JavaScript objects, pulling values from objects and testing the outcome of these in controlled tests.
 
