@@ -13,4 +13,9 @@ export function getMatrix(n) {
   return matrix
 }
 
-export function updateMatrix(matrix, coords, value) {}
+export function updateMatrix(matrix, coords, value) {
+  let changeRow = matrix[coords[0]]
+  changeRow[coords[1]] = value
+
+  return matrix
+}
