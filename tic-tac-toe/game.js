@@ -35,6 +35,7 @@ function cellClicked(e) {
 }
 
 function checkForWin(symbol) {
+  // straight-line win
   if (
     cells[0].innerHTML == symbol &&
     cells[1].innerHTML == symbol &&
@@ -71,6 +72,7 @@ function checkForWin(symbol) {
     cells[8].innerHTML == symbol
   )
     gameIsOver = true
+  // diagonal win
   else if (
     cells[0].innerHTML == symbol &&
     cells[4].innerHTML == symbol &&
@@ -86,7 +88,7 @@ function checkForWin(symbol) {
 
   if (gameIsOver) {
     subtitle.innerHTML = "It's all Over Rover"
-
+    // add the confetti
     import('https://cdn.skypack.dev/canvas-confetti').then((confetti) => {
       confetti.default()
     })
