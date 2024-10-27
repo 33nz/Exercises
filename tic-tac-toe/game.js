@@ -1,7 +1,7 @@
 console.log('Welcome to Tic-Tac-Toe! Enjoy!')
 
 let cells = document.getElementsByTagName('td')
-const subtitle = docuument.getElementById('subtitle')
+const subtitle = document.getElementById('subtitle')
 
 console.log(cells)
 
@@ -20,7 +20,7 @@ function cellClicked(e) {
   // create a variable for the cell clicked
   let cell = e.target
   // if the cell is empty (check it's innerHTML property)
-  if (cell.innerHTMl == '') {
+  if (cell.innerHTML == '') {
     let symbol = noughtsTurn ? 'O' : 'X'
 
     cell.innerHTML = symbol
@@ -86,5 +86,9 @@ function checkForWin(symbol) {
 
   if (gameIsOver) {
     subtitle.innerHTML = "It's all Over Rover"
+
+    import('https://cdn.skypack.dev/canvas-confetti').then((confetti) => {
+      confetti.default()
+    })
   }
 }
