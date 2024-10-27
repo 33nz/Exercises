@@ -9,13 +9,18 @@ for (let i = 0; i < cells.length; i++) {
 }
 
 function cellClicked(e) {
+  // create a variable for the cell clicked so I can do stuff with it
   let cell = e.target
   let index = Array.prototype.indexOf.call(cells, cell)
   console.log('I clicked on cell ' + (index + 1))
 
-  // create a variable for the cell clicked so I can do stuff with it
-
   // if the cell is empty check its innerHTML property
+
+  if (cell.innerHTML == '' && noughtsTurn) {
+    cell.innerHTML = 'O'
+  } else if (cell.innerHTML == '' && !noughtsTurn) {
+    cell.innerHTML = 'X'
+  } else return
 
   // figure out which symbol to put in cell based on the noughtsTurn boolean
 
