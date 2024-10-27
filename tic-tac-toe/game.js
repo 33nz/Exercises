@@ -25,8 +25,8 @@ function cellClicked(e) {
 
     cell.innerHTML = symbol
     subtitle.textContent = noughtsTurn
-      ? 'It is now Xs turn!!'
-      : 'It is now Os turn!!'
+      ? "It's now X's turn!!"
+      : "It's now O's turn!!"
 
     toggleTurn()
 
@@ -83,4 +83,8 @@ function checkForWin(symbol) {
     cells[6].innerHTML == symbol
   )
     gameIsOver = true
+
+  if (gameIsOver) {
+    subtitle.innerHTML = "It's all Over Rover"
+  }
 }
