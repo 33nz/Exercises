@@ -8,6 +8,8 @@ for (let i = 0; i < cells.length; i++) {
   cells[i].onclick = cellClicked
 }
 
+let noughtsTurn = true
+
 function cellClicked(e) {
   // create a variable for the cell clicked so I can do stuff with it
   let cell = e.target
@@ -22,6 +24,8 @@ function cellClicked(e) {
     cell.innerHTML = 'X'
   } else return
 
+  noughtsTurn = !noughtsTurn
+
   // figure out which symbol to put in cell based on the noughtsTurn boolean
 
   // put the symbol inside the cell by using innerHTML again
@@ -32,7 +36,5 @@ function cellClicked(e) {
 
   // update the subtitle saying whose turn it is now
 }
-
-let noughtsTurn = true
 
 let gameIsOver
