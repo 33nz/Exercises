@@ -1,1 +1,1 @@
-##Java learning and katas folder##
+## Java learning and katas folder
